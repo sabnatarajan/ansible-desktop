@@ -1,0 +1,13 @@
+---
+
+- name: Install common packages on Arch
+  when: "ansible_distribution  == 'Archlinux'"
+  pacman: 
+    state: present
+    name: "{{ packages }}"
+
+- name: Install common packages on Ubuntu
+  when: "ansible_distribution == 'Ubuntu'"
+  apt:
+    state: present
+    name: "{{ packages }}"

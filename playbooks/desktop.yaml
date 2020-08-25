@@ -1,0 +1,7 @@
+---
+
+- name: Desktop playbook
+  hosts: localhost
+  roles:
+    - { role: common, become: true }
+    - { role: zsh, become: true}
