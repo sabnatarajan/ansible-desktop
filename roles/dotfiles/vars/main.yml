@@ -1,0 +1,9 @@
+---
+
+dotfiles_repo: "https://github.com/sabnatarajan/dotfiles.git"
+dotfiles_local_dir: "$HOME/dotfiles"
+git_accept_hostkey: false
+
+dotfiles_links: []
+
+
