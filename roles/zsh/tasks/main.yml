@@ -1,7 +1,12 @@
 ---
 
-- name: Install zsh
+- name: Install zsh on Arch Linux
   pacman: name=zsh state=present
+  when: "ansible_distribution == 'Archlinux'"
+
+- name: Install zsh on Ubuntu
+  apt: name=zsh state=present
+  when: "ansible_distribution == 'Ubuntu'"
 
 - name: Set shell for root
   user: name=root shell=/bin/zsh
