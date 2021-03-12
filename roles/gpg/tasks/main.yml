@@ -1,0 +1,24 @@
+---
+- name: OS Specific Steps
+  include: "os_family/{{ ansible_os_family }}.yml"
+
+- name: Ensure GPG directory is present
+  when: "gpg_config_link == True"
+  file:
+    dest: "~/.gnupg"
+    state: directory
+    mode: 0700
+    owner: "{{ ansible_user_id }}"
+
+- name: Link GPG config
+  when: "gpg_config_link == True"
+  file:
+    src: "{{ gpg_config_src }}"
+    dest: "{{ gpg_config_dst }}"
+    state: link
+    mode: 0644
+
+- name: Import GPG keys
+  shell: gpg --list-keys "{{ item }}" || gpg --recv-keys "{{ item }}"
+  loop: "{{ gpg_import_keys }}"
+

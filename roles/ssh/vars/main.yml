@@ -1,0 +1,8 @@
+---
+ssh_config_link: true
+ssh_config_src: $HOME/git/dotfiles/ssh/config
+
+ssh_homebrew_packages:
+  - openssh
+
+ssh_import_yubikey: true

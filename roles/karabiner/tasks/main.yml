@@ -1,0 +1,13 @@
+---
+- name: Install Karabiner
+  homebrew_cask:
+    name: karabiner-elements
+    state: present
+  when: "ansible_distribution == 'MacOSX'"
+
+- name: Link Karabiner config
+  file:
+    src: "{{ karabiner_config_src }}"
+    dest: "{{ karabiner_config_dst }}"
+    state: link
+  when: "karabiner_config_link == True"

@@ -1,0 +1,14 @@
+---
+- name: Ensure tmux is installed
+  homebrew:
+    name: tmux
+    state: present
+  when: "ansible_distribution == 'MacOSX'"
+
+- name: Link tmux config
+  file:
+    src: "{{ tmux_config_src }}"
+    dest: "{{ tmux_config_dst }}"
+    state: link
+  when: "tmux_config_link == True"
+

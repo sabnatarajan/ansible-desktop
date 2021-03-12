@@ -1,0 +1,6 @@
+---
+- name: Install useful shell tools
+  ignore_errors: yes
+  homebrew:
+    name: "{{ shell_tools_homebrew_packages }}"
+    state: present

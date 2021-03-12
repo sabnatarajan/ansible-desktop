@@ -1,0 +1,38 @@
+---
+- name: Install OpenSSH (MacOS)
+  when: "ansible_distribution == 'MacOSX'"
+  homebrew:
+    name: "{{ ssh_homebrew_packages }}"
+    state: present
+
+- name: Ensure SSH directory is present
+  file:
+    dest: "~/.ssh"
+    mode: 0700
+    owner: "{{ ansible_user_id }}"
+    state: directory
+
+- name: Link SSH config
+  when: "ssh_config_link == True"
+  file:
+    src: "{{ ssh_config_src }}"
+    dest: "~/.ssh/config"
+    state: link
+
+# TODO: Figure out how to set only private keys
+- name: Set correct permissions on SSH private (and public) keys
+  file:
+    dest: "{{ item }}"
+    mode: 0600
+    owner: "{{ ansible_user_id }}"
+  with_fileglob:
+    - "~/.ssh/*_rsa"
+
+- name: Set correct permissions on SSH public keys
+  file:
+    dest: "{{ item }}"
+    mode: 0644
+    owner: "{{ ansible_user_id }}"
+  with_fileglob:
+    - "~/.ssh/*_rsa.pub"
+

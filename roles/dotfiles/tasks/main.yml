@@ -3,15 +3,7 @@
 - name: Clone dotfiles directory
   git:
     repo: "{{ dotfiles_repo }}"
-    dest: "{{ dotfiles_local_dir }}"
+    dest: "{{ dotfiles_path }}"
     accept_hostkey: "{{ git_accept_hostkey }}"
   become: false
 
-- name: Link files
-  file:
-    src: "{{ dotfiles_local_dir}}/{{ item.src }}"
-    dest: "{{ item.dest }}"
-    mode: 0644
-    state: link
-  become: false
-  with_items: "{{ dotfiles_links }}"

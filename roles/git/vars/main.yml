@@ -1,0 +1,3 @@
+---
+git_config_src: $HOME/git/dotfiles/git
+git_config_dst: $HOME/.config/git

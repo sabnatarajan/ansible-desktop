@@ -1,0 +1,12 @@
+---
+gpg_homebrew_packages:
+  - gnupg
+  # - hopenpgp-tools
+  - pinentry-mac
+
+gpg_config_link: true
+gpg_config_src: $HOME/git/dotfiles/gnupg/gpg-agent.conf
+gpg_config_dst: $HOME/.gnupg/gpg-agent.conf
+
+gpg_import_keys:
+  - 7561E764BECC583B

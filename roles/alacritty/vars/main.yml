@@ -1,0 +1,4 @@
+---
+alacritty_config_link: true
+alacritty_config_src: $HOME/git/dotfiles/alacritty
+alacritty_config_dst: $HOME/.config/alacritty

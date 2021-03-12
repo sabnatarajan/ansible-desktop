@@ -1,0 +1,5 @@
+---
+- name: Install Apps
+  homebrew_cask:
+    name: "{{ apps_homebrew_cask_packages }}"
+    state: present

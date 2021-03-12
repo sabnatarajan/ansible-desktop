@@ -1,0 +1,4 @@
+---
+yubikey_ssh_import: true
+yubikey_cardno: "000615755207"
+yubikey_ssh_path: ~/.ssh/yubikey_rsa.pub

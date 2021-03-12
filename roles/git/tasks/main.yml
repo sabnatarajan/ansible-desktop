@@ -1,0 +1,11 @@
+---
+- name: Update git to latest version (MacOS)
+  homebrew:
+    name: git
+    state: upgraded
+
+- name: Link global git config
+  file:
+    src: "{{ git_config_src }}"
+    dest: "{{ git_config_dst }}"
+    state: link

@@ -1,0 +1,21 @@
+---
+- name: MacOS Playbook
+  hosts: localhost
+  roles:
+    - { role: dotfiles }
+    - { role: git }
+    - { role: fish }
+    - { role: shell-tools }
+    - { role: neovim }
+    - { role: tmux }
+    - { role: karabiner }
+    - { role: alacritty }
+    - { role: gpg }
+    - { role: yubikey }
+    - { role: ssh }
+    - { role: pyenv }
+    - { role: vscode }
+    - { role: starship }
+    - { role: brave-browser }
+    - { role: apps }
+    - { role: fonts }

@@ -1,0 +1,4 @@
+---
+- name: Install Brave Browser (MacOS)
+  homebrew_cask:
+    name: "{{ brave_homebrew_packages }}"

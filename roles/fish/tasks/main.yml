@@ -1,0 +1,42 @@
+---
+- name: Install fish
+  homebrew:
+    name: fish
+    state: present
+  when: "ansible_distribution == 'MacOSX'"
+
+- name: Get fish path
+  command: which fish
+  register: fish_path
+
+- name: Check if fish is in /etc/shells
+  become: true
+  lineinfile:
+    path: /etc/shells
+    state: present
+    line: "{{ fish_path.stdout }}"
+
+- name: Set fish as default shell
+  become: true
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: "{{ fish_path.stdout }}"
+
+- name: Link fish config
+  file:
+    src: "{{ fish_config_src }}"
+    dest: "{{ fish_config_dst }}"
+    state: link
+  when: fish_config_link == True
+
+- name: Fetch Fisher install script
+  when: "fish_fisher_install == True"
+  get_url:
+    url: "{{ fish_fisher_url }}"
+    dest: "{{ fish_fisher_dest }}"
+
+- name: Install fisher plugins
+  when: "fish_fisher_install_plugins == True"
+  shell: 
+    cmd: fisher update
+    executable: "{{ fish_path.stdout }}"

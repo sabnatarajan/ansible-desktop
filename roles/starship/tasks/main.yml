@@ -1,0 +1,13 @@
+---
+- name: Install Starship prompt (MacOS)
+  homebrew:
+    name: starship
+    state: present
+  when: "ansible_distribution == 'MacOSX'"
+
+- name: Link Starship config
+  file:
+    src: "{{ starship_config_src }}"
+    dest: "{{ starship_config_dst }}"
+    state: link
+  when: "starship_config_link == True"

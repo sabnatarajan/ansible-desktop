@@ -1,0 +1,21 @@
+---
+- name: Check if Yubikey is already imported
+  when: "yubikey_ssh_import == True"
+  stat:
+    path: "{{ yubikey_ssh_path }}"
+  register: yubikey_ssh_stat
+
+- name: Decide whether a Yubikey must be imported
+  when: "yubikey_ssh_stat.stat.exists == True"
+  set_fact:
+    yubikey_ssh_import: false
+
+- name: Check if Yubikey is plugged in
+  command: ssh-add -l | grep cardno:"{{ yubikey_cardno }}"
+  register: ssh_yubikey_attached
+  ignore_errors: yes
+  when: "yubikey_ssh_import == True"
+
+- name: Import Yubikey
+  shell: ssh-add -L | grep cardno:"{{ yubikey_cardno }}" > {{ yubikey_ssh_path }}
+  when: "yubikey_ssh_import == True and ssh_yubikey_attached.rc == 0"

@@ -1,0 +1,12 @@
+---
+shell_tools_homebrew_packages:
+  - fd
+  - fzf
+  - kubectx
+  - lazygit
+  - ncdu
+  - nmap
+  - ripgrep
+  - telnet
+  - watch
+

@@ -1,0 +1,9 @@
+---
+fish_config_link: true
+fish_config_src: $HOME/git/dotfiles/fish
+fish_config_dst: $HOME/.config/fish
+
+fish_fisher_install: true
+fish_fisher_install_plugins: true
+fish_fisher_url: https://git.io/fisher
+fish_fisher_dest: $HOME/.config/fish/functions/fisher.fish

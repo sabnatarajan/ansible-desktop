@@ -1,0 +1,14 @@
+---
+- name: Ensure Alacritty is installed
+  homebrew_cask:
+    name: alacritty
+    state: present
+  when: "ansible_distribution == 'MacOSX'"
+
+- name: Link Alacritty config
+  file:
+    src: "{{ alacritty_config_src }}"
+    dest: "{{ alacritty_config_dst }}"
+    state: link
+  when: "alacritty_config_link == True"
+

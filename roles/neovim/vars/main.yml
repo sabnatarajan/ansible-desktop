@@ -1,0 +1,4 @@
+---
+neovim_nightly: true
+neovim_config_src: "$HOME/git/dotfiles/nvim"
+neovim_config_dst: "$HOME/.config/nvim"
