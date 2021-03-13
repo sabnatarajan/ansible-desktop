@@ -20,6 +20,7 @@
     - { role: discord,       tags: discord  }
     - { role: whatsapp,      tags: whatsapp  }
     - { role: alfred,        tags: alfred  }
+    - { role: spotify,       tags: spotify  }
     - { role: parsec,        tags: parsec  }
     - { role: fonts,         tags: fonts  }
     - { role: macos,         tags: macos  }
