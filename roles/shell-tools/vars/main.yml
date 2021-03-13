@@ -1,5 +1,6 @@
 ---
 shell_tools_homebrew_packages:
+  - exa
   - fd
   - fzf
   - kubectx
