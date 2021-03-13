@@ -18,5 +18,6 @@
     - { role: starship,      tags: starship  }
     - { role: brave-browser, tags: brave-browser  }
     - { role: apps,          tags: apps  }
+    - { role: bitwarden,     tags: bitwarden  }
     - { role: fonts,         tags: fonts  }
     - { role: macos,         tags: macos  }

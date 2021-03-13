@@ -1,0 +1,5 @@
+---
+- name: Install bitwarden (Mac)
+  homebrew_cask:
+    name: bitwarden
+    state: present
