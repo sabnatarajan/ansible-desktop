@@ -22,6 +22,7 @@
     - { role: alfred,        tags: alfred  }
     - { role: spotify,       tags: spotify  }
     - { role: docker,        tags: docker  }
+    - { role: steam,         tags: steam  }
     - { role: parsec,        tags: parsec  }
     - { role: fonts,         tags: fonts  }
     - { role: macos,         tags: macos  }
