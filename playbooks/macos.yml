@@ -19,3 +19,4 @@
     - { role: brave-browser }
     - { role: apps }
     - { role: fonts }
+    - { role: macos }
