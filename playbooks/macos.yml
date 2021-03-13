@@ -2,21 +2,21 @@
 - name: MacOS Playbook
   hosts: localhost
   roles:
-    - { role: dotfiles }
-    - { role: git }
-    - { role: fish }
-    - { role: shell-tools }
-    - { role: neovim }
-    - { role: tmux }
-    - { role: karabiner }
-    - { role: alacritty }
-    - { role: gpg }
-    - { role: yubikey }
-    - { role: ssh }
-    - { role: pyenv }
-    - { role: vscode }
-    - { role: starship }
-    - { role: brave-browser }
-    - { role: apps }
-    - { role: fonts }
-    - { role: macos }
+    - { role: dotfiles,      tags: dotfiles }
+    - { role: git,           tags: git  }
+    - { role: fish,          tags: fish  }
+    - { role: shell-tools,   tags: shell-tools  }
+    - { role: neovim,        tags: neovim  }
+    - { role: tmux,          tags: tmux  }
+    - { role: karabiner,     tags: karabiner  }
+    - { role: alacritty,     tags: alacritty  }
+    - { role: gpg,           tags: gpg  }
+    - { role: yubikey,       tags: yubikey  }
+    - { role: ssh,           tags: ssh  }
+    - { role: pyenv,         tags: pyenv  }
+    - { role: vscode,        tags: vscode  }
+    - { role: starship,      tags: starship  }
+    - { role: brave-browser, tags: brave-browser  }
+    - { role: apps,          tags: apps  }
+    - { role: fonts,         tags: fonts  }
+    - { role: macos,         tags: macos  }
