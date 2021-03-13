@@ -1,0 +1,4 @@
+---
+pyenv_homebrew_packages:
+  - pyenv
+  - pyenv-virtualenv
