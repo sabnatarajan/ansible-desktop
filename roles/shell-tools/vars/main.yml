@@ -1,5 +1,5 @@
 ---
-shell_tools_homebrew_packages:
+shell_tools_homebrew_cask_packages:
   - exa
   - fd
   - fzf
@@ -11,3 +11,5 @@ shell_tools_homebrew_packages:
   - telnet
   - watch
 
+shell_tools_homebrew_packages:
+  - jq

@@ -1,6 +1,10 @@
 ---
-- name: Install useful shell tools
-  ignore_errors: yes
+- name: Install useful shell tools (Homebrew cask)
+  homebrew:
+    name: "{{ shell_tools_homebrew_cask_packages }}"
+    state: present
+
+- name: Install useful shell tools (non-cask)
   homebrew:
     name: "{{ shell_tools_homebrew_packages }}"
     state: present
