@@ -2,6 +2,7 @@
 - name: MacOS Playbook
   hosts: localhost
   roles:
+    - { role: common,        tags: common }
     - { role: dotfiles,      tags: dotfiles }
     - { role: git,           tags: git  }
     - { role: fish,          tags: fish  }
