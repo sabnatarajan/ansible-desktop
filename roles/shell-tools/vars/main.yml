@@ -13,3 +13,4 @@ shell_tools_homebrew_cask_packages:
 
 shell_tools_homebrew_packages:
   - jq
+  - bat
