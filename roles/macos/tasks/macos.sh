@@ -69,6 +69,9 @@ misc_settings=(
   "com.apple.SoftwareUpdate  ConfigDataInstall                   -int 1"             # Automatically download apps purchased on other Macs
   "com.apple.commerce        AutoUpdate                          -bool true"         # Turn on app auto-update
   "com.apple.commerce        AutoUpdateRestartRequired           -bool true"         # Allow the App Store to reboot machine on macOS updates
+
+  "NSGlobalDomain            com.apple.sound.beepvolume          -int 0"             # Disable alert sounds
+  "NSGlobalDomain            com.apple.sound.uiaudio.enabled     -bool false"             # Disable alert sounds
 )
 
 
