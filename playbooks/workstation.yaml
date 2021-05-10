@@ -1,6 +1,6 @@
 ---
 
-- name: Desktop playbook
+- name: Workstation playbook
   hosts: localhost
   roles:
     - { role: common, become: true }
