@@ -1,8 +1,6 @@
 ---
-- name: Update git to latest version (MacOS)
-  homebrew:
-    name: git
-    state: upgraded
+- name: 
+  include: "{{ ansible_os_family }}.yml"
 
 - name: Link global git config
   file:

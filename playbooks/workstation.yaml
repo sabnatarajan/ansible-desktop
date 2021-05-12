@@ -5,3 +5,4 @@
   roles:
     - { role: common,     tags: common }
     - { role: dotfiles,   tags: dotfiles }
+    - { role: git,        tags: git }

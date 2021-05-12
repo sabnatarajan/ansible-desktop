@@ -1,0 +1,4 @@
+- name: Update git to latest version (Archlinux)
+  pacman:
+    name: git
+    state: latest
