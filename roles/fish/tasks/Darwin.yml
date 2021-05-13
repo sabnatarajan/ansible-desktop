@@ -1,0 +1,5 @@
+
+- name: Install fish shell (MacOS)
+  homebrew:
+    name: fish
+    state: latest

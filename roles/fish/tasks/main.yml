@@ -1,9 +1,6 @@
 ---
 - name: Install fish
-  homebrew:
-    name: fish
-    state: present
-  when: "ansible_distribution == 'MacOSX'"
+  include: "{{ ansible_os_family }}.yml"
 
 - name: Get fish path
   command: which fish

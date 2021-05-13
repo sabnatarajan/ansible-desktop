@@ -1,0 +1,5 @@
+
+- name: Install fish shell (Arch Linux)
+  pacman:
+    name: fish
+    state: latest
