@@ -26,7 +26,5 @@ shell_tools_pacman_packages:
   - nmap
   - ripgrep
   - telnet
-  - watch
   - jq
   - bat
-  - git-delta
