@@ -3,4 +3,4 @@
   pacman: 
     name: "{{ shell_tools_pacman_packages }}"
     state: present
-    become: true
+  become: true
