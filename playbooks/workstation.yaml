@@ -7,3 +7,4 @@
     - { role: dotfiles,   tags: dotfiles }
     - { role: git,        tags: git }
     - { role: fish,          tags: fish  }
+    - { role: shell-tools,   tags: shell-tools  }
