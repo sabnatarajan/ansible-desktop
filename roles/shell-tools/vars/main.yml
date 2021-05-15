@@ -25,6 +25,5 @@ shell_tools_pacman_packages:
   - ncdu
   - nmap
   - ripgrep
-  - telnet
   - jq
   - bat
