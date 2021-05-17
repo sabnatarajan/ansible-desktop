@@ -18,6 +18,6 @@
 
 - name: Build yay
   command:
-    cmd: "makepkg -si"
+    cmd: "makepkg -si --noconfirm"
     chdir: "/tmp/yay"
   
