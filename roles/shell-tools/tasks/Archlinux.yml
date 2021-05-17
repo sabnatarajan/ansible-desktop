@@ -17,5 +17,7 @@
     state: present
 
 - name: Build yay
-  command: "cd /tmp/yay && makepkg -si"
+  command:
+    cmd: "makepkg -si"
+    chdir: "/tmp/yay"
   
