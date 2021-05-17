@@ -4,3 +4,17 @@
     name: "{{ shell_tools_pacman_packages }}"
     state: present
   become: true
+
+- name: Clone yay repository
+  git:
+    repo: "https://aur.archlinux.org/yay.git"
+    dest: "/tmp/yay"
+
+- name: Install dependencies for yay
+  pacman:
+    name: base-devel
+    state: present
+
+- name: Build yay
+  command: "cd /tmp/yay && makepkg -si"
+  
