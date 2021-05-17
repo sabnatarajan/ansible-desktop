@@ -11,6 +11,7 @@
     dest: "/tmp/yay"
 
 - name: Install dependencies for yay
+  become: true
   pacman:
     name: base-devel
     state: present
