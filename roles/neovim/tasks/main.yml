@@ -7,6 +7,10 @@
     state: head
   when: "ansible_distribution == 'MacOSX'"
 
+- name: Install Neovim (Nightly)
+  command: "yay -S neovim-nightly-bin --noconfirm"
+  when: "ansible_os_family == 'Archlinux'"
+
 - name: Link Neovim config
   file:
     src: "{{ neovim_config_src }}"
