@@ -5,22 +5,8 @@
     name: "{{ gpg_homebrew_packages }}"
     state: present
 
-- name: Find pinentry-mac path
-  command: which pinentry-mac
-  register: pinentry_mac_path
-  ignore_errors: yes
-
-- name: Ensure /usr/local/bin is present
-  when: "pinentry_mac_path.rc == 0"
-  become: true
-  file:
-    dest: "/usr/local/bin"
-    state: directory
-
-- name: Symlink pinentry-mac
-  when: "pinentry_mac_path.rc == 0"
-  become: true
-  file:
-    src: "{{ pinentry_mac_path.stdout }}"
-    dest: /usr/local/bin/pinentry-mac
-    state: link
+- name: Ensure GPG packages are linked
+  when: "ansible_distribution == 'MacOSX'"
+  homebrew:
+    name: "{{ gpg_homebrew_packages }}"
+    state: linked
