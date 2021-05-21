@@ -27,3 +27,4 @@ shell_tools_pacman_packages:
   - ripgrep
   - jq
   - bat
+  - bind-tools
