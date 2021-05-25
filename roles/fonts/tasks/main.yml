@@ -1,12 +1,10 @@
 ---
-- name: Tap the Homebrew fonts
-  when: "ansible_distribution == 'MacOSX'"
-  homebrew_tap:
-    name: homebrew/cask-fonts
-    state: present
+- name: Create font directory
+  when: "ansible_distribution == 'Linux'"
+  file:
+    path: "$HOME/.local/share"
+    state: directory
+    mode: "0644"
 
-- name: Install Fonts (MacOS)
-  when: "ansible_distribution == 'MacOSX'"
-  homebrew_cask:
-    name: "{{ fonts_homebrew_packages }}"
-    state: present
+- name: OS-specific install
+  include: "{{ ansible_os_family }}.yml"
