@@ -9,3 +9,4 @@
     - { role: git,          tags: git }
     - { role: fish,         tags: fish  }
     - { role: neovim,       tags: neovim  }
+    - { role: ssh,          tags: ssh  }
