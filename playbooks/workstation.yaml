@@ -10,3 +10,4 @@
     - { role: fish,         tags: fish  }
     - { role: neovim,       tags: neovim  }
     - { role: ssh,          tags: ssh  }
+    - { role: fonts,        tags: fonts  }
