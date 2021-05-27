@@ -6,7 +6,7 @@
   file:
     dest: "~/.local/share/fonts"
     state: directory
-    mode: "0644"
+    mode: "0755"
     owner: "{{ ansible_user_id }}"
 
 - name: OS-specific install
