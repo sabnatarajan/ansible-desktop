@@ -2,10 +2,10 @@
 - name: Create font directory
   when: "ansible_distribution in ['Archlinux','Ubuntu','RedHat','Fedora']"
   file:
-    path: "~/.local/share/fonts"
+    dest: "~/.local/share/fonts"
     state: directory
     mode: "0644"
-    owner: "{{ user }}"
+    owner: "{{ ansible_user_id }}"
 
 - name: OS-specific install
   include: "{{ ansible_os_family }}.yml"
