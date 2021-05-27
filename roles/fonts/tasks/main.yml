@@ -1,6 +1,8 @@
 ---
 - name: Create font directory
   when: "ansible_distribution in ['Archlinux','Ubuntu','RedHat','Fedora']"
+  become: true
+  become_user: "{{ ansible_user_id }}"
   file:
     dest: "~/.local/share/fonts"
     state: directory
