@@ -2,4 +2,4 @@
 - name: Install Fira Code
   get_url:
     url: https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.ttf
-    dest: "'$HOME/.local/share/Fira Code Regular Font Complete.ttf'"
+    dest: "'~/.local/share/fonts/Fira Code Regular Font Complete.ttf'"
