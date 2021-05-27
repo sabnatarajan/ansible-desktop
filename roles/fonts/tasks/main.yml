@@ -1,6 +1,6 @@
 ---
 - name: Create font directory
-  when: "ansible_distribution == 'Linux'"
+  when: "ansible_distribution in ['Archlinux','Ubuntu','RedHat','Fedora']"
   file:
     path: "$HOME/.local/share"
     state: directory

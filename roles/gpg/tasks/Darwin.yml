@@ -1,0 +1,12 @@
+---
+- name: Install GPG packages
+  when: "ansible_distribution == 'MacOSX'"
+  homebrew:
+    name: "{{ gpg_homebrew_packages }}"
+    state: present
+
+- name: Ensure GPG packages are linked
+  when: "ansible_distribution == 'MacOSX'"
+  homebrew:
+    name: "{{ gpg_homebrew_packages }}"
+    state: linked
