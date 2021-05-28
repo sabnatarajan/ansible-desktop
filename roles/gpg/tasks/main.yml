@@ -1,6 +1,6 @@
 ---
 - name: OS Specific Steps
-  include: "os_family/{{ ansible_os_family }}.yml"
+  include: "{{ ansible_os_family }}.yml"
 
 - name: Ensure GPG directory is present
   when: "gpg_config_link == True"
@@ -19,6 +19,5 @@
     mode: 0644
 
 - name: Import GPG keys
-  shell: gpg --list-keys "{{ item }}" || gpg --recv-keys "{{ item }}"
-  loop: "{{ gpg_import_keys }}"
+  shell: curl https://keybase.io/sabnatarajan/pgp_keys.asc | gpg --import
 

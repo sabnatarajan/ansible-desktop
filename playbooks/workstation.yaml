@@ -11,3 +11,4 @@
     - { role: neovim,       tags: neovim  }
     - { role: ssh,          tags: ssh  }
     - { role: fonts,        tags: fonts  }
+    - { role: gpg,          tags: gpg  }
