@@ -5,6 +5,12 @@
     name: "{{ ssh_homebrew_packages }}"
     state: present
 
+- name: Install OpenSSH (Archlinux)
+  when: "ansible_os_family == 'Archlinux'"
+  pacman:
+    name: "{{ ssh_pacman_packages }}"
+    state: present
+
 - name: Ensure SSH directory is present
   file:
     dest: "~/.ssh"
