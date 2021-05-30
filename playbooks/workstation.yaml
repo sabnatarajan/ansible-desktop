@@ -12,3 +12,4 @@
     - { role: ssh,          tags: ssh  }
     - { role: fonts,        tags: fonts  }
     - { role: gpg,          tags: gpg  }
+    - { role: yubikey,      tags: yubikey  }
