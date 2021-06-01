@@ -28,3 +28,5 @@ shell_tools_pacman_packages:
   - jq
   - bat
   - bind-tools
+  - tmux
+  - starship
