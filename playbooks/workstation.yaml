@@ -8,6 +8,7 @@
     - { role: shell-tools,  tags: shell-tools  }
     - { role: git,          tags: git }
     - { role: fish,         tags: fish  }
+    - { role: tmux,         tags: tmux  }
     - { role: neovim,       tags: neovim  }
     - { role: ssh,          tags: ssh  }
     - { role: fonts,        tags: fonts  }
