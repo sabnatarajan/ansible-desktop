@@ -1,0 +1,6 @@
+---
+- name: Install X server
+  become: true
+  pacman:
+    name: "{{ xorg_pacman_packages }}"
+    state: present

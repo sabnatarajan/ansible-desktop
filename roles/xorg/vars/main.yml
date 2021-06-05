@@ -1,0 +1,4 @@
+---
+xorg_pacman_packages:
+  - xorg-server
+  - xorg-xinit
