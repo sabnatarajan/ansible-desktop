@@ -4,3 +4,9 @@
   pacman:
     name: "{{ xorg_pacman_packages }}"
     state: present
+
+- name: Link xinitrc
+  file:
+    state: link
+    src: "{{ xorg_config_src }}"
+    dest: "{{ xorg_config_dst }}"

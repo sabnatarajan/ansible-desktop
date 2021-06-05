@@ -2,3 +2,6 @@
 xorg_pacman_packages:
   - xorg-server
   - xorg-xinit
+
+xorg_config_src: $HOME/git/dotfiles/X11
+xorg_config_dst: $HOME/.config/X11
