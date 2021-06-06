@@ -1,4 +1,10 @@
 ---
+- name: Install drivers
+  become: true
+  pacman:
+    name: "{{ xorg_video_driver_packages }}"
+    state: present
+
 - name: Install X server
   become: true
   pacman:

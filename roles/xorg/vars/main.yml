@@ -1,6 +1,9 @@
 ---
+xorg_video_driver_packages:
+  - xf86-video-nvidia
+
 xorg_pacman_packages:
-  - xorg-server
+  - xorg
   - xorg-xinit
 
 xorg_config_src: $HOME/git/dotfiles/X11
