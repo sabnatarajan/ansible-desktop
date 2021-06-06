@@ -1,6 +1,6 @@
 ---
 xorg_video_driver_packages:
-  - xf86-video-nvidia
+  # - xf86-video-nvidia
 
 xorg_pacman_packages:
   - xorg
