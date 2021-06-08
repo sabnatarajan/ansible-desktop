@@ -17,5 +17,5 @@
   when: "yubikey_ssh_import == True"
 
 - name: Import Yubikey
-  shell: ssh-add -L | sed 's@ @@g' | grep cardno:"{{ yubikey_cardno }}" > {{ yubikey_ssh_path }}
+  shell: ssh-add -L | sed 's@ @@g' | grep cardno" > {{ yubikey_ssh_path }}
   when: "yubikey_ssh_import == True and ssh_yubikey_attached.rc == 0"
