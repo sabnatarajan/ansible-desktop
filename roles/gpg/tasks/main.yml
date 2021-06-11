@@ -10,10 +10,18 @@
     mode: 0700
     owner: "{{ ansible_user_id }}"
 
-- name: Link GPG config
-  when: "gpg_config_link == True"
+- name: Link GPG config (Mac)
+  when: "gpg_config_link == True and ansible_distribution == 'MacOSX'"
   file:
-    src: "{{ gpg_config_src }}"
+    src: "{{ gpg_config_src_mac }}"
+    dest: "{{ gpg_config_dst }}"
+    state: link
+    mode: 0644
+
+- name: Link GPG config (Arch)
+  when: "gpg_config_link == True and ansible_distribution != 'MacOSX'"
+  file:
+    src: "{{ gpg_config_src_linux }}"
     dest: "{{ gpg_config_dst }}"
     state: link
     mode: 0644
