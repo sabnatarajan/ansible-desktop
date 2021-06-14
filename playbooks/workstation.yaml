@@ -8,6 +8,7 @@
     - { role: shell-tools,  tags: shell-tools  }
     - { role: git,          tags: git }
     - { role: fish,         tags: fish  }
+    - { role: alacritty,    tags: alacritty  }
     - { role: tmux,         tags: tmux  }
     - { role: neovim,       tags: neovim  }
     - { role: ssh,          tags: ssh  }
@@ -15,3 +16,4 @@
     - { role: gpg,          tags: gpg  }
     - { role: yubikey,      tags: yubikey  }
     - { role: xorg,         tags: xorg  }
+    - { role: window-mgr,   tags: window-mgr  }
