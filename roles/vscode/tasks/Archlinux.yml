@@ -1,0 +1,6 @@
+---
+- name: Install VS Code (Arch)
+  become: true
+  pacman:
+    name: "{{ vscode_pacman_packages }}"
+    state: present

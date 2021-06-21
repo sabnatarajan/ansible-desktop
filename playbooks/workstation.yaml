@@ -17,3 +17,4 @@
     - { role: yubikey,      tags: yubikey  }
     - { role: xorg,         tags: xorg  }
     - { role: window-mgr,   tags: window-mgr  }
+    - { role: vscode,       tags: vscode  }
