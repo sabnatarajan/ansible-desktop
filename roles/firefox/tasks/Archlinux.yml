@@ -1,0 +1,6 @@
+---
+- name: Install Firefox (Arch)
+  become: true
+  pacman:
+    name: "firefox"
+    state: present
