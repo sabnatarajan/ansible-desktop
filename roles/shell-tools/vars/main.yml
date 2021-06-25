@@ -10,6 +10,7 @@ shell_tools_homebrew_cask_packages:
   - ripgrep
   - telnet
   - watch
+  - lazygit
 
 shell_tools_homebrew_packages:
   - jq
@@ -29,3 +30,4 @@ shell_tools_pacman_packages:
   - bat
   - bind-tools
   - starship
+  - lazygit
