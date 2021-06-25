@@ -7,3 +7,9 @@
     state: link
     src: "{{ window_mgr_config_src }}"
     dest: "{{ window_mgr_config_dst }}"
+
+- name: Link polybar config
+  file:
+    state: link
+    src: "{{ window_mgr_polybar_config_src }}"
+    dest: "{{ window_mgr_polybar_config_dst }}"

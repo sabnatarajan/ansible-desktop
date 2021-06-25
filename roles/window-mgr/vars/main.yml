@@ -2,3 +2,6 @@
 window_mgr_name: herbstluftwm
 window_mgr_config_src: "$HOME/git/dotfiles/herbstluftwm"
 window_mgr_config_dst: "$HOME/.config/herbstluftwm"
+
+window_mgr_polybar_config_src: "$HOME/git/dotfiles/polybar"
+window_mgr_polybar_config_dst: "$HOME/.config/polybar"
