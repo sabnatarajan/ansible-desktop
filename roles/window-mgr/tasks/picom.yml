@@ -7,7 +7,7 @@
     state: present
 
 - name: picom | link config
-  when: "{{ window_mgr.picom.enabled }}"
+  when: "window_mgr.picom.enabled"
   file:
     state: link
     src: "{{ window_mgr.picom.config_src }}"
