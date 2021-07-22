@@ -1,0 +1,8 @@
+---
+
+- name: polybar | link config
+  file:
+    state: link
+    src: "{{ window_mgr_polybar_config_src }}"
+    dest: "{{ window_mgr_polybar_config_dst }}"
+

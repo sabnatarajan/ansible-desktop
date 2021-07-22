@@ -1,8 +1,14 @@
 ---
-- name: Ensure herbstluftwm is installed (Arch)
+- name: herbstluftwm | install
   when: "ansible_os_family == 'Archlinux'"
   become: true
   pacman:
     name: herbstluftwm
     state: present
+
+- name: herbstluftwm | link config
+  file:
+    state: link
+    src: "{{ window_mgr_config_src }}"
+    dest: "{{ window_mgr_config_dst }}"
 
