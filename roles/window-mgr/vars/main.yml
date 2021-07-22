@@ -1,10 +1,16 @@
 ---
-window_mgr_name: herbstluftwm
-window_mgr_config_src: "$HOME/git/dotfiles/herbstluftwm"
-window_mgr_config_dst: "$HOME/.config/herbstluftwm"
 
-window_mgr_polybar_config_src: "$HOME/git/dotfiles/polybar"
-window_mgr_polybar_config_dst: "$HOME/.config/polybar"
-
-window_mgr_picom_config_src: "$HOME/git/dotfiles/picom"
-window_mgr_picom_config_dst: "$HOME/.config/picom"
+window_mgr:
+  name: herbstluftwm
+  config_src: "$HOME/git/dotfiles/herbstluftwm"
+  config_dst: "$HOME/.config/herbstluftwm"
+  
+  polybar:
+    enabled: true
+    config_src: "$HOME/git/dotfiles/polybar"
+    config_dst: "$HOME/.config/polybar"
+  
+  picom:
+    enabled: true
+    config_src: "$HOME/git/dotfiles/picom"
+    config_dst: "$HOME/.config/picom"

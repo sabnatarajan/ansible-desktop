@@ -1,7 +1,14 @@
 ---
 
+- name: picom | install (Arch)
+  when: "ansible_distribution == 'Archlinux'"
+  pacman:
+    name: picom
+    state: present
+
 - name: picom | link config
+  when: "{{ window_mgr.picom.enabled }}"
   file:
     state: link
-    src: "{{ window_mgr_picom_config_src }}"
-    dest: "{{ window_mgr_picom_config_dst }}"
+    src: "{{ window_mgr.picom.config_src }}"
+    dest: "{{ window_mgr.picom.config_dst }}"

@@ -1,6 +1,6 @@
 ---
 - name: Install WM
-  include: "{{ window_mgr_name }}.yml"
+  include: "{{ window_mgr.name }}.yml"
 
 - include: polybar.yml
 
