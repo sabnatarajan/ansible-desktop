@@ -1,10 +1,10 @@
 ---
-- name: shell-tools(darwin) | install cask
+- name: darwin | install cask
   homebrew:
     name: "{{ shell_tools.homebrew_cask_packages }}"
     state: present
 
-- name: shell-tools(darwin) | install non-cask
+- name: darwin | install non-cask
   homebrew:
     name: "{{ shell_tools.homebrew_packages }}"
     state: present

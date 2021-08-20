@@ -1,22 +1,22 @@
 ---
-- name: shell-tools(archlinux) | install
+- name: archlinux | install
   pacman: 
     name: "{{ shell_tools.pacman_packages }}"
     state: present
   become: true
 
-- name: shell-tools(archlinux) | yay | clone repository
+- name: archlinux | yay | clone repository
   git:
     repo: "https://aur.archlinux.org/yay.git"
     dest: "/tmp/yay"
 
-- name: shell-tools(archlinux) | yay | install deps
+- name: archlinux | yay | install deps
   become: true
   pacman:
     name: base-devel
     state: present
 
-- name: shell-tools(archlinux) | yay | install
+- name: archlinux | yay | install
   command:
     cmd: "makepkg -si --noconfirm"
     chdir: "/tmp/yay"
