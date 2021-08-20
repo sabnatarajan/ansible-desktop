@@ -1,7 +1,7 @@
 ---
 - name: Install shell-tools (Arch)
   pacman: 
-    name: "{{ shell_tools_pacman_packages }}"
+    name: "{{ shell_tools.pacman_packages }}"
     state: present
   become: true
 

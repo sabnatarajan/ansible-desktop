@@ -1,5 +1,6 @@
 ---
-shell_tools_homebrew_cask_packages:
+shell_tools:
+  homebrew_cask_packages:
   - exa
   - fd
   - fzf
@@ -12,12 +13,12 @@ shell_tools_homebrew_cask_packages:
   - watch
   - lazygit
 
-shell_tools_homebrew_packages:
+  homebrew_packages:
   - jq
   - bat
   - git-delta
 
-shell_tools_pacman_packages:
+  pacman_packages:
   - exa
   - fd
   - fzf
