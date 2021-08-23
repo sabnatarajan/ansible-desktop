@@ -33,9 +33,10 @@
 - name: "pacman | install"
   when: |
     ansible_os_family == 'Archlinux'
-    and 'arch_aur' not in item"
+    and 'arch_aur' not in item
     and ansible_os_family|lower not in item.skip|default([])
   with_items: "{{ shell_tools }}"
+  become: true
   community.general.pacman:
     name: "{{ item.package | default(item.name) }}"
     state: present

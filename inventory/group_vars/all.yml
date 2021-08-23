@@ -39,9 +39,10 @@ shell_tools:
   - { name: ncdu }
   - { name: nmap }
   - { name: ripgrep }
-  - { name: telnet }
-  - { name: watch }
+  - { name: telnet, skip: ['archlinux'] }
+  - { name: watch, skip: ['archlinux'] }
   - { name: lazygit }
   - { name: bat }
   - { name: git-delta }
   - { name: bind-tools, skip: ['darwin'] }
+  - { name: inetutils, skip: ['darwin'] }
