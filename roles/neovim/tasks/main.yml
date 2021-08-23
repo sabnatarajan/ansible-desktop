@@ -1,7 +1,7 @@
 ---
 - name: Install Neovim (Nightly)
   homebrew:
-    name: 
+    name:
       - luajit
       - neovim
     state: head
@@ -16,5 +16,3 @@
     src: "{{ neovim_config_src }}"
     dest: "{{ neovim_config_dst }}"
     state: link
-    
-

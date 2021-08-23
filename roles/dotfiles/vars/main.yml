@@ -3,5 +3,3 @@
 dotfiles_repo: "https://github.com/sabnatarajan/dotfiles.git"
 dotfiles_path: "$HOME/git/dotfiles"
 git_accept_hostkey: false
-
-

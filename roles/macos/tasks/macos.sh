@@ -92,4 +92,3 @@ apps=(
   "Finder"
 )
 for app in "${apps[@]}"; do killall $app &> /dev/null; done
-

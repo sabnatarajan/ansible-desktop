@@ -7,7 +7,7 @@ main() {
     exit 1
   fi
 
-  case $OS in 
+  case $OS in
     "Arch Linux")
       install_arch;;
     Debian)
@@ -23,7 +23,7 @@ detect_os() {
     OS=$(lsb_release -si)
   elif [ -f /etc/debian_version ]; then
     OS=Debian
-  else 
+  else
     echo "Unknown"
   fi
 }

@@ -1,5 +1,5 @@
 ---
-- name: 
+- name:
   include: "{{ ansible_os_family }}.yml"
 
 - name: Link global git config

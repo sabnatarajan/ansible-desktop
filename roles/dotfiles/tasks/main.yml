@@ -6,4 +6,3 @@
     dest: "{{ dotfiles_path }}"
     accept_hostkey: "{{ git_accept_hostkey }}"
   become: false
-

@@ -17,4 +17,3 @@
     dest: "{{ tmux_config_dst }}"
     state: link
   when: "tmux_config_link == True"
-

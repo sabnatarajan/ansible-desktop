@@ -42,4 +42,3 @@
     owner: "{{ ansible_user_id }}"
   with_fileglob:
     - "~/.ssh/*_rsa.pub"
-

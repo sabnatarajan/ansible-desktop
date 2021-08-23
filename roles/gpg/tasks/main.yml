@@ -28,4 +28,3 @@
 
 - name: Import GPG keys
   shell: curl https://keybase.io/sabnatarajan/pgp_keys.asc | gpg --import
-

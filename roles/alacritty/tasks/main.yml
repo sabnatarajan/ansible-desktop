@@ -11,4 +11,3 @@
     dest: "{{ alacritty_config_dst }}"
     state: link
   when: "alacritty_config_link == True"
-

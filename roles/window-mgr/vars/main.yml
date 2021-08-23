@@ -4,12 +4,12 @@ window_mgr:
   name: herbstluftwm
   config_src: "$HOME/git/dotfiles/herbstluftwm"
   config_dst: "$HOME/.config/herbstluftwm"
-  
+
   polybar:
     enabled: true
     config_src: "$HOME/git/dotfiles/polybar"
     config_dst: "$HOME/.config/polybar"
-  
+
   picom:
     enabled: true
     config_src: "$HOME/git/dotfiles/picom"

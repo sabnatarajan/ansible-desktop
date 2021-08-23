@@ -34,6 +34,6 @@
 
 - name: Install fisher plugins
   when: "fish_fisher_install_plugins == True"
-  shell: 
+  shell:
     cmd: fisher update
     executable: "{{ fish_path.stdout }}"

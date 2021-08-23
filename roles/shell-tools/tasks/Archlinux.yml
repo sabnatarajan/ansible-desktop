@@ -1,6 +1,6 @@
 ---
 - name: archlinux | install
-  pacman: 
+  pacman:
     name: "{{ shell_tools.pacman_packages }}"
     state: present
   become: true
@@ -20,4 +20,3 @@
   command:
     cmd: "makepkg -si --noconfirm"
     chdir: "/tmp/yay"
-  
