@@ -5,18 +5,18 @@
   roles:
     - { role: common,       tags: common }
     - { role: dotfiles,     tags: dotfiles }
-    - { role: shell-tools,  tags: shell-tools  }
+    - { role: shell-tools,  tags: shell-tools }
     - { role: git,          tags: git }
-    - { role: fish,         tags: fish  }
-    - { role: alacritty,    tags: alacritty  }
-    - { role: tmux,         tags: tmux  }
-    - { role: neovim,       tags: neovim  }
-    - { role: ssh,          tags: ssh  }
-    - { role: fonts,        tags: fonts  }
-    - { role: gpg,          tags: gpg  }
-    - { role: yubikey,      tags: yubikey  }
-    - { role: xorg,         tags: xorg  }
-    - { role: window-mgr,   tags: window-mgr  }
-    - { role: wallpapers,   tags: wallpapers  }
-    - { role: firefox,      tags: firefox  }
-    - { role: vscode,       tags: vscode  }
+    - { role: fish,         tags: fish }
+    - { role: alacritty,    tags: alacritty }
+    - { role: tmux,         tags: tmux }
+    - { role: neovim,       tags: neovim }
+    - { role: ssh,          tags: ssh }
+    - { role: fonts,        tags: fonts }
+    - { role: gpg,          tags: gpg }
+    - { role: yubikey,      tags: yubikey }
+    - { role: xorg,         tags: xorg }
+    - { role: window-mgr,   tags: window-mgr }
+    - { role: wallpapers,   tags: wallpapers }
+    - { role: firefox,      tags: firefox }
+    - { role: vscode,       tags: vscode }
