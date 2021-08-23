@@ -8,9 +8,11 @@
 
 - name: dotfiles
   include: dotfiles.yml
+  tags: dotfiles
 
 - name: git
   include: git.yml
+  tags: git
 
 - name: ssh
   include: ssh.yml
