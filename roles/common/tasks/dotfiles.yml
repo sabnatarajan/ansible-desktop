@@ -1,0 +1,8 @@
+---
+
+- name: dotfiles | clone
+  git:
+    repo: "{{ dotfiles.repo }}"
+    dest: "{{ dotfiles.dest }}"
+    accept_hostkey: true
+  become: false

@@ -1,0 +1,5 @@
+---
+
+dotfiles:
+  repo: "https://github.com/sabnatarajan/dotfiles.git"
+  dest: "$HOME/dotfiles"

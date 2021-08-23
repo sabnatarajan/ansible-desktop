@@ -1,7 +1,10 @@
 ---
 
-- name: Ensure .config directory exists
-  file:
-    dest: "~/.config"
+- name: config | directory is present
+  ansible.builtin.file:
+    dest: "$HOME/.config"
     state: directory
     mode: 0700
+
+- name: dotfiles
+  include: dotfiles.yml
