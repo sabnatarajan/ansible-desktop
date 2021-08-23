@@ -4,7 +4,7 @@
   hosts: localhost
   roles:
     - { role: common,       tags: common }
-    - { role: shell-tools,  tags: shell-tools }
+    - { role: shell_tools,  tags: shell_tools }
     - { role: fish,         tags: fish }
     - { role: alacritty,    tags: alacritty }
     - { role: tmux,         tags: tmux }

@@ -4,7 +4,7 @@
   roles:
     - { role: common,        tags: common }
     - { role: fish,          tags: fish }
-    - { role: shell-tools,   tags: shell-tools }
+    - { role: shell_tools,   tags: shell_tools }
     - { role: neovim,        tags: neovim }
     - { role: tmux,          tags: tmux }
     - { role: karabiner,     tags: karabiner }

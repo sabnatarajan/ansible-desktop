@@ -1,9 +1,4 @@
 ---
-- name: archlinux | install
-  pacman:
-    name: "{{ shell_tools.pacman_packages }}"
-    state: present
-  become: true
 
 - name: archlinux | yay | clone repository
   git:

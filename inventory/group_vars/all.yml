@@ -24,3 +24,24 @@ fish:
   fisher_install_plugins: true
   fisher_url: https://git.io/fisher
   fisher_dest: /tmp/fisher.fish
+
+shell_tools:
+  - { name: starship }
+  - { name: jq }
+  - { name: exa }
+  - { name: ripgrep }
+  - { name: fd }
+  - { name: fzf }
+  - { name: kubectl }
+  - { name: kubectx }
+  - { name: k9s }
+  - { name: lazygit }
+  - { name: ncdu }
+  - { name: nmap }
+  - { name: ripgrep }
+  - { name: telnet }
+  - { name: watch }
+  - { name: lazygit }
+  - { name: bat }
+  - { name: git-delta }
+  - { name: bind-tools, skip: ['darwin'] }
