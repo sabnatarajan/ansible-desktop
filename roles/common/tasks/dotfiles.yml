@@ -1,8 +1,7 @@
 ---
 
 - name: dotfiles | clone
-  git:
+  ansible.builtin.git:
     repo: "{{ dotfiles.repo }}"
     dest: "{{ dotfiles.dest }}"
     accept_hostkey: true
-  become: false
