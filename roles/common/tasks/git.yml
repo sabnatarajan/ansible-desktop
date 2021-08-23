@@ -1,0 +1,19 @@
+---
+
+- name: git | install (macos)
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew:
+    name: git
+    state: present
+
+- name: git | install (arch)
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name: git
+    state: present
+
+- name: git | link config
+  ansible.builtin.file:
+    src: "{{ git.config_src }}"
+    dest: "{{ git.config_dest }}"
+    state: link

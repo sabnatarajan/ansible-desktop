@@ -3,8 +3,6 @@
   hosts: localhost
   roles:
     - { role: common,        tags: common }
-    - { role: dotfiles,      tags: dotfiles }
-    - { role: git,           tags: git }
     - { role: fish,          tags: fish }
     - { role: shell-tools,   tags: shell-tools }
     - { role: neovim,        tags: neovim }

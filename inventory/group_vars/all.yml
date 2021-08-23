@@ -1,5 +1,12 @@
 ---
 
+config:
+  path: "$HOME/.config"
+
 dotfiles:
   repo: "https://github.com/sabnatarajan/dotfiles.git"
-  dest: "$HOME/dotfiles"
+  path: "$HOME/dotfiles"
+
+git:
+  config_src: "{{ dotfiles.path }}/git"
+  config_dest: "{{ config.path }}/git"

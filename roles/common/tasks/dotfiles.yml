@@ -3,5 +3,5 @@
 - name: dotfiles | clone
   ansible.builtin.git:
     repo: "{{ dotfiles.repo }}"
-    dest: "{{ dotfiles.dest }}"
+    dest: "{{ dotfiles.path }}"
     accept_hostkey: true

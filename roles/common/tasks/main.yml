@@ -8,3 +8,6 @@
 
 - name: dotfiles
   include: dotfiles.yml
+
+- name: git
+  include: git.yml

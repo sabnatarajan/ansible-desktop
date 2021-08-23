@@ -1,4 +1,0 @@
-- name: Update git to latest version (MacOS)
-  homebrew:
-    name: git
-    state: latest
