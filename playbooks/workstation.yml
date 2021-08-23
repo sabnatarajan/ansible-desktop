@@ -9,7 +9,6 @@
     - { role: alacritty,    tags: alacritty }
     - { role: tmux,         tags: tmux }
     - { role: neovim,       tags: neovim }
-    - { role: ssh,          tags: ssh }
     - { role: fonts,        tags: fonts }
     - { role: gpg,          tags: gpg }
     - { role: yubikey,      tags: yubikey }

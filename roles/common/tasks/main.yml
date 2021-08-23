@@ -11,3 +11,7 @@
 
 - name: git
   include: git.yml
+
+- name: ssh
+  include: ssh.yml
+  tags: ssh

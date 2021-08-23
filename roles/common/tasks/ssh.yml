@@ -1,0 +1,43 @@
+---
+
+- name: ssh | install openssh (macos)
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew:
+    name: openssh
+    state: present
+
+- name: ssh | install openssh (arch)
+  when: "ansible_os_family == 'Archlinux'"
+  become: true
+  community.general.pacman:
+    name: openssh
+    state: present
+
+- name: ssh | ensure directory is present
+  ansible.builtin.file:
+    state: directory
+    dest: "{{ ssh.config_dir }}"
+    mode: 0700
+    owner: "{{ ansible_user_id }}"
+
+- name: ssh | link config
+  ansible.builtin.file:
+    src: "{{ ssh.config_src }}"
+    dest: "{{ ssh.config_dest }}"
+    state: link
+
+- name: ssh | set correct permissions on private keys
+  ansible.builtin.file:
+    dest: "{{ item }}"
+    mode: 0600
+    owner: "{{ ansible_user_id }}"
+  with_fileglob:
+    - "{{ ssh.config_dir }}/*_rsa"
+
+- name: ssh | set correct permissions on public keys
+  ansible.builtin.file:
+    dest: "{{ item }}"
+    mode: 0644
+    owner: "{{ ansible_user_id }}"
+  with_fileglob:
+    - "{{ ssh.config_dir }}/*_rsa.pub"

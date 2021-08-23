@@ -10,3 +10,8 @@ dotfiles:
 git:
   config_src: "{{ dotfiles.path }}/git"
   config_dest: "{{ config.path }}/git"
+
+ssh:
+  config_dir: "~/.ssh"
+  config_src: "{{ dotfiles.path }}/ssh/config"
+  config_dest: "$HOME/.ssh/config"
