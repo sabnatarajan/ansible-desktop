@@ -4,9 +4,7 @@
   hosts: localhost
   roles:
     - { role: common,       tags: common }
-    - { role: dotfiles,     tags: dotfiles }
     - { role: shell-tools,  tags: shell-tools }
-    - { role: git,          tags: git }
     - { role: fish,         tags: fish }
     - { role: alacritty,    tags: alacritty }
     - { role: tmux,         tags: tmux }
