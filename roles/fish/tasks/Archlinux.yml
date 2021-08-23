@@ -1,5 +1,5 @@
 
-- name: Install fish shell (Arch Linux)
-  pacman:
+- name: install (arch)
+  community.general.pacman:
     name: fish
-    state: latest
+    state: present

@@ -1,39 +1,45 @@
 ---
-- name: Install fish
+
+- name: install ({{ ansible_os_family | lower}})
   include: "{{ ansible_os_family }}.yml"
 
-- name: Get fish path
-  command: which fish
+- name: find binary path
+  ansible.builtin.command: which fish
   register: fish_path
 
-- name: Check if fish is in /etc/shells
+- name: ensure present in /etc/shells
   become: true
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/shells
     state: present
     line: "{{ fish_path.stdout }}"
 
-- name: Set fish as default shell
+- name: set as default shell
   become: true
-  user:
+  ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     shell: "{{ fish_path.stdout }}"
 
-- name: Link fish config
-  file:
-    src: "{{ fish_config_src }}"
-    dest: "{{ fish_config_dst }}"
+- name: link config
+  ansible.builtin.file:
+    src: "{{ fish.config_src }}"
+    dest: "{{ fish.config_dest }}"
     state: link
-  when: fish_config_link == True
 
-- name: Fetch Fisher install script
-  when: "fish_fisher_install == True"
-  get_url:
-    url: "{{ fish_fisher_url }}"
-    dest: "{{ fish_fisher_dest }}"
+- name: run setup
+  ansible.builtin.shell:
+    cmd: source {{ fish.config_dest }}/setup.fish
+    executable: "{{ fish_path.stdout }}"
 
-- name: Install fisher plugins
-  when: "fish_fisher_install_plugins == True"
-  shell:
-    cmd: fisher update
+### Fisher ###
+- name: fisher | fetch install script
+  when: "fish.fisher_install"
+  ansible.builtin.get_url:
+    url: "{{ fish.fisher_url }}"
+    dest: "{{ fish.fisher_dest }}"
+
+- name: fisher | install plugins
+  when: "fish.fisher_install_plugins == True"
+  ansible.builtin.shell:
+    cmd: source {{ fish.fisher_dest }} && fisher update
     executable: "{{ fish_path.stdout }}"

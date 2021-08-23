@@ -5,7 +5,7 @@ config:
 
 dotfiles:
   repo: "https://github.com/sabnatarajan/dotfiles.git"
-  path: "$HOME/dotfiles"
+  path: "$HOME/git/dotfiles"
 
 git:
   config_src: "{{ dotfiles.path }}/git"
@@ -15,3 +15,12 @@ ssh:
   config_dir: "~/.ssh"
   config_src: "{{ dotfiles.path }}/ssh/config"
   config_dest: "$HOME/.ssh/config"
+
+fish:
+  config_src: "{{ dotfiles.path }}/fish"
+  config_dest: "{{ config.path}}/fish"
+
+  fisher_install: true
+  fisher_install_plugins: true
+  fisher_url: https://git.io/fisher
+  fisher_dest: /tmp/fisher.fish
