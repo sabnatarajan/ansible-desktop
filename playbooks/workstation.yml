@@ -4,6 +4,7 @@
   hosts: localhost
   roles:
     - { role: common,       tags: common }
+    - { role: arch,         tags: arch }
     - { role: shell_tools,  tags: shell_tools }
     - { role: fish,         tags: fish }
     - { role: alacritty,    tags: alacritty }

@@ -1,0 +1,6 @@
+---
+
+- name: misc | gnome-keyring
+  community.general.pacman:
+    name: gnome-keyring
+    state: present

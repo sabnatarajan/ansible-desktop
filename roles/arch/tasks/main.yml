@@ -1,0 +1,16 @@
+---
+
+- name: audio
+  include: audio.yml
+
+- name: bluetooth
+  include: bluetooth.yml
+
+- name: display
+  include: display.yml
+
+- name: x11
+  include: x11.yml
+
+- name: misc
+  include: misc.yml
