@@ -5,3 +5,10 @@
 
 - include: homebrew.yml
   tags: homebrew
+
+- include: alfred.yml
+  tags: alfred
+
+- include: karabiner.yml
+  tags: karabiner
+  when: "ansible_os_family == 'Darwin'"

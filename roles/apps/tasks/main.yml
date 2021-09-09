@@ -5,15 +5,8 @@
 - include: discord.yml
   tags: discord
 
-- include: alfred.yml
-  tags: alfred
-
 - include: bitwarden.yml
   tags: bitwarden
-
-- include: karabiner.yml
-  tags: karabiner
-  when: "ansible_os_family == 'Darwin'"
 
 - include: spotify.yml
   tags: spotify
