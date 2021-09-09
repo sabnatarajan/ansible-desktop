@@ -10,4 +10,3 @@
     - { role: xorg,         tags: xorg }
     - { role: window-mgr,   tags: window-mgr }
     - { role: firefox,      tags: firefox }
-    - { role: vscode,       tags: vscode }

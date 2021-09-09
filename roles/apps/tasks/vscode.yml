@@ -1,0 +1,13 @@
+---
+
+- name: vscode | install (macos)
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew_cask:
+    name: visual-studio-code
+    state: present
+
+- name: vscode | install (archlinux)
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name: code
+    state: present

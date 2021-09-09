@@ -1,6 +1,0 @@
----
-vscode_homebrew_packages:
-  - visual-studio-code
-
-vscode_pacman_packages:
-  - code

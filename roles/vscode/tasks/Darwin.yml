@@ -1,5 +1,0 @@
----
-- name: Install VS Code (MacOS)
-  homebrew_cask:
-    name: "{{ vscode_homebrew_packages }}"
-    state: present

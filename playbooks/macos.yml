@@ -7,7 +7,6 @@
     - { role: apps,          tags: apps }
     - { role: yubikey,       tags: yubikey }
     - { role: pyenv,         tags: pyenv }
-    - { role: vscode,        tags: vscode }
     - { role: brave-browser, tags: brave-browser }
     - { role: whatsapp,      tags: whatsapp }
     - { role: docker,        tags: docker }

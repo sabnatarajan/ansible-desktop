@@ -10,3 +10,6 @@
 
 - include: spotify.yml
   tags: spotify
+
+- include: vscode.yml
+  tags: vscode
