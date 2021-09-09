@@ -2,24 +2,20 @@
 
 - name: config | directory is present
   ansible.builtin.file:
-    dest: "$HOME/.config"
+    dest: "{{ config.path }}"
     state: directory
     mode: 0700
 
-- name: dotfiles
-  include: dotfiles.yml
+- include: dotfiles.yml
   tags: dotfiles
 
-- name: git
-  include: git.yml
+- include: git.yml
   tags: git
 
-- name: ssh
-  include: ssh.yml
+- include: ssh.yml
   tags: ssh
 
-- name: wallpapers
-  include: wallpapers.yml
+- include: wallpapers.yml
   tags: wallpapers
 
 - include: gpg.yml
