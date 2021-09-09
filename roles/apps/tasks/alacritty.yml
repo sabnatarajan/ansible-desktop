@@ -1,18 +1,18 @@
 ---
 
-- name: install | macos (x86)
+- name: alacritty | install | macos (x86)
   community.general.homebrew_cask:
     name: alacritty
     state: present
   when: "ansible_distribution == 'Linux' and ansible_architecture == 'x86_64'"
 
-- name: install | archlinux
+- name: alacritty | install | archlinux
   when: "ansible_os_family == 'Archlinux'"
   community.general.pacman:
     name: alacritty
     state: present
 
-- name: link config
+- name: alacritty | link config
   ansible.builtin.file:
     src: "{{ alacritty.config_src }}"
     dest: "{{ alacritty.config_dest }}"

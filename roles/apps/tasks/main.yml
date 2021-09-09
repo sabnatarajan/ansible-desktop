@@ -1,12 +1,9 @@
 ---
-- name: alacritty
-  include: alacritty.yml
+- include: alacritty.yml
   tags: alacritty
 
-- name: discord
-  include: discord.yml
+- include: discord.yml
   tags: discord
 
-- name: alfred
-  include: alfred.yml
+- include: alfred.yml
   tags: alfred

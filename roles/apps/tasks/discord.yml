@@ -1,11 +1,11 @@
 ---
-- name: install | macos
+- name: discord | install | macos
   when: "ansible_os_family == 'Darwin'"
   community.general.homebrew_cask:
     name: discord
     state: present
 
-- name: install | archlinux
+- name: discord | install | archlinux
   when: "ansible_os_family == 'Archlinux'"
   community.general.pacman:
     name: discord
