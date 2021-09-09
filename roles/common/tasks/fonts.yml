@@ -1,0 +1,27 @@
+---
+
+- name: fonts | create directory
+  when: "ansible_distribution in ['Archlinux','Ubuntu','RedHat','Fedora']"
+  become: true
+  become_user: "{{ ansible_user_id }}"
+  file:
+    dest: "~/.local/share/fonts"
+    state: directory
+    mode: "0755"
+    owner: "{{ ansible_user_id }}"
+
+- name: fonts | install (macos)
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew_cask:
+    name:
+    - font-hack-nerd-font
+    - font-fira-code-nerd-font
+    state: present
+
+- name: fonts | install (archlinux)
+  when: "ansible_os_family == 'ArchLinux'"
+  community.general.pacman:
+    name:
+    - ttf-hack
+    - ttf-fira-code
+    - ttf-liberation

@@ -9,7 +9,6 @@
     - { role: fish,         tags: fish }
     - { role: apps,         tags: apps }
     - { role: neovim,       tags: neovim }
-    - { role: fonts,        tags: fonts }
     - { role: yubikey,      tags: yubikey }
     - { role: xorg,         tags: xorg }
     - { role: window-mgr,   tags: window-mgr }

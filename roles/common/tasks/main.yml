@@ -23,3 +23,6 @@
 
 - include: tmux.yml
   tags: tmux
+
+- include: fonts.yml
+  tags: fonts
