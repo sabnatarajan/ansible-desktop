@@ -1,0 +1,13 @@
+---
+
+- name: bitwarden | install | macos
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew_cask:
+    name: bitwarden
+    state: present
+
+- name: bitwarden | install | archlinux
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.homebrew_cask:
+    name: bitwarden
+    state: present

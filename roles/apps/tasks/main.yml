@@ -7,3 +7,6 @@
 
 - include: alfred.yml
   tags: alfred
+
+- include: bitwarden.yml
+  tags: bitwarden
