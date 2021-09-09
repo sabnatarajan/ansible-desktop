@@ -17,3 +17,7 @@
 - name: ssh
   include: ssh.yml
   tags: ssh
+
+- name: wallpapers
+  include: wallpapers.yml
+  tags: wallpapers

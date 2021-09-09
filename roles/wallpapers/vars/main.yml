@@ -1,4 +1,0 @@
----
-wallpapers:
-  src: $HOME/git/dotfiles/wallpapers
-  dst: $HOME/.local/share/wallpapers

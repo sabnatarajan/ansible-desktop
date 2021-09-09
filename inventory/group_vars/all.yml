@@ -29,6 +29,10 @@ alacritty:
   config_src: "{{ dotfiles.path }}/alacritty"
   config_dest: "{{ config.path }}/alacritty"
 
+wallpapers:
+  src: "{{ dotfiles.path }}/wallpapers"
+  dest: $HOME/.local/share/wallpapers
+
 shell_tools:
   - { name: starship }
   - { name: jq }

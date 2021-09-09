@@ -1,12 +1,12 @@
 ---
 - name: wallpapers | ensure dir exists
-  file:
-    dest: "{{ '/'.join(wallpapers.dst.split('/')[:-1]) }}"
+  ansible.builtin.file:
+    dest: "{{ '/'.join(wallpapers.dest.split('/')[:-1]) }}"
     state: directory
     mode: 0755
 
 - name: wallpapers | link
-  file:
+  ansible.builtin.file:
     src: "{{ wallpapers.src }}"
-    dest: "{{ wallpapers.dst }}"
+    dest: "{{ wallpapers.dest }}"
     state: link
