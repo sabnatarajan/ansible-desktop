@@ -5,8 +5,8 @@
   roles:
     - { role: common,       tags: common }
     - { role: arch,         tags: arch }
+    - { role: shell,        tags: shell }
     - { role: shell_tools,  tags: shell_tools }
-    - { role: fish,         tags: fish }
     - { role: apps,         tags: apps }
     - { role: xorg,         tags: xorg }
     - { role: window-mgr,   tags: window-mgr }

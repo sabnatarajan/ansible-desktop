@@ -1,0 +1,14 @@
+---
+
+# TODO: Link config, set as default, etc.
+- name: zsh | install (archlinux)
+  when: "ansible_distribution == 'Archlinux'"
+  community.general.pacman: 
+    name: zsh 
+    state: present
+
+- name: zsh | install (macos)
+  when: "ansible_distribution == 'Darwin'"
+  community.general.homebrew: 
+    name: zsh
+    state: present

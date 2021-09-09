@@ -1,5 +1,0 @@
-
-- name: install (macos)
-  community.general.homebrew:
-    name: fish
-    state: present

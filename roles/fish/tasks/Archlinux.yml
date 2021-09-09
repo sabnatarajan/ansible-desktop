@@ -1,5 +1,0 @@
-
-- name: install (arch)
-  community.general.pacman:
-    name: fish
-    state: present

@@ -1,32 +1,41 @@
 ---
 
-- name: install ({{ ansible_os_family | lower}})
-  include: "{{ ansible_os_family }}.yml"
+- name: fish | install (macos)
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew:
+    name: fish
+    state: present
 
-- name: find binary path
+- name: fish | install (archlinux)
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name: fish
+    state: present
+
+- name: fish | find binary path
   ansible.builtin.command: which fish
   register: fish_path
 
-- name: ensure present in /etc/shells
+- name: fish | ensure present in /etc/shells
   become: true
   ansible.builtin.lineinfile:
     path: /etc/shells
     state: present
     line: "{{ fish_path.stdout }}"
 
-- name: set as default shell
+- name: fish | set as default shell
   become: true
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     shell: "{{ fish_path.stdout }}"
 
-- name: link config
+- name: fish | link config
   ansible.builtin.file:
     src: "{{ fish.config_src }}"
     dest: "{{ fish.config_dest }}"
     state: link
 
-- name: run setup
+- name: fish | run setup
   ansible.builtin.shell:
     cmd: source {{ fish.config_dest }}/setup.fish
     executable: "{{ fish_path.stdout }}"

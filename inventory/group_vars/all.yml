@@ -2,6 +2,7 @@
 
 config:
   path: "$HOME/.config"
+  shell: fish
 
 dotfiles:
   repo: "https://github.com/sabnatarajan/dotfiles.git"

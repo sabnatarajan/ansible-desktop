@@ -3,7 +3,7 @@
   hosts: localhost
   roles:
     - { role: common,        tags: common }
-    - { role: fish,          tags: fish }
+    - { role: shell,         tags: shell }
     - { role: shell_tools,   tags: shell_tools }
     - { role: apps,          tags: apps }
     - { role: yubikey,       tags: yubikey }
