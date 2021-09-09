@@ -2,3 +2,7 @@
 - name: alacritty
   include: alacritty.yml
   tags: alacritty
+
+- name: discord
+  include: discord.yml
+  tags: discord
