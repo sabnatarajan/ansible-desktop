@@ -5,7 +5,7 @@ config:
 
 dotfiles:
   repo: "https://github.com/sabnatarajan/dotfiles.git"
-  path: "$HOME/git/dotfiles"
+  path: "$HOME/dotfiles"
 
 git:
   config_src: "{{ dotfiles.path }}/git"
