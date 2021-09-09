@@ -9,6 +9,5 @@
     - { role: apps,         tags: apps }
     - { role: xorg,         tags: xorg }
     - { role: window-mgr,   tags: window-mgr }
-    - { role: wallpapers,   tags: wallpapers }
     - { role: firefox,      tags: firefox }
     - { role: vscode,       tags: vscode }
