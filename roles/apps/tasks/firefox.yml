@@ -1,0 +1,13 @@
+---
+
+- name: firefox | install (macos)
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew_cask:
+    name: firefox
+    state: present
+
+- name: firefox | install (archlinux)
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name: firefox
+    state: present

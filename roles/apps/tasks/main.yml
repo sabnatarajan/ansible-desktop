@@ -13,3 +13,9 @@
 
 - include: vscode.yml
   tags: vscode
+
+- include: firefox.yml
+  tags: firefox
+
+- include: brave.yml
+  tags: brave

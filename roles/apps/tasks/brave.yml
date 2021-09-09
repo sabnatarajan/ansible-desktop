@@ -1,0 +1,12 @@
+---
+
+- name: brave | install (macos)
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew_cask:
+    name: brave-browser
+    state: present
+
+- name: brave | install (archlinux)
+  when: "ansible_os_family == 'Archlinux'"
+  ansible.builtin.debug:
+    msg: not implemented!
