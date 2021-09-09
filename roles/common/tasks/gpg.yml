@@ -14,7 +14,7 @@
 
 - name: gpg | config | create dir
   ansible.builtin.file:
-    dest: gpg.config_dir
+    dest: "{{ gpg.config_dir }}"
     state: directory
     mode: 0700
     owner: "{{ ansible_user_id }}"
