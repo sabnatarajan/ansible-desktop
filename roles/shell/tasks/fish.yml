@@ -48,7 +48,7 @@
     dest: "{{ fish.fisher_dest }}"
 
 - name: fisher | install plugins
-  when: "fish.fisher_install_plugins == True"
+  when: "fish.fisher_install_plugins"
   ansible.builtin.shell:
     cmd: source {{ fish.fisher_dest }} && fisher update
     executable: "{{ fish_path.stdout }}"

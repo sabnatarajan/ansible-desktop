@@ -5,3 +5,4 @@
     repo: "{{ dotfiles.repo }}"
     dest: "{{ dotfiles.path }}"
     accept_hostkey: true
+    version: main
