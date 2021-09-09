@@ -1,0 +1,7 @@
+---
+
+- name: alfred | install
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew_cask:
+    name: alfred
+    state: present

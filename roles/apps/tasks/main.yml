@@ -6,3 +6,7 @@
 - name: discord
   include: discord.yml
   tags: discord
+
+- name: alfred
+  include: alfred.yml
+  tags: alfred
