@@ -16,6 +16,11 @@ ssh:
   config_src: "{{ dotfiles.path }}/ssh/config"
   config_dest: "$HOME/.ssh/config"
 
+gpg:
+  config_dir: "~/.gnupg"
+  config_src_mac: "{{ dotfiles.path }}/gnupg/gpg-agent-mac.conf"
+  config_src_linux: "{{ dotfiles.path }}/gnupg/gpg-agent-linux.conf"
+
 fish:
   config_src: "{{ dotfiles.path }}/fish"
   config_dest: "{{ config.path}}/fish"

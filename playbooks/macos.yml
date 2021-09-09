@@ -8,7 +8,6 @@
     - { role: neovim,        tags: neovim }
     - { role: tmux,          tags: tmux }
     - { role: apps,          tags: apps }
-    - { role: gpg,           tags: gpg }
     - { role: yubikey,       tags: yubikey }
     - { role: pyenv,         tags: pyenv }
     - { role: vscode,        tags: vscode }

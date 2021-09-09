@@ -1,0 +1,39 @@
+---
+
+- name: gpg | install | macos
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew:
+    name: [ gnupg, pinentry-mac ]
+    state: present
+
+- name: gpg | install | archlinux
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name: gnupg
+    state: present
+
+- name: gpg | config | create dir
+  ansible.builtin.file:
+    dest: gpg.config_dir
+    state: directory
+    mode: 0700
+    owner: "{{ ansible_user_id }}"
+
+- name: gpg | config | link (macos)
+  when: "ansible_os_family == 'Darwin'"
+  file:
+    src: "{{ gpg.config_src_mac }}"
+    dest: "{{ gpg.config_dir }}/gpg-agent.conf"
+    state: link
+    mode: 0644
+
+- name: gpg | config | link (linux)
+  when: "ansible_os_family != 'Darwin'"
+  file:
+    src: "{{ gpg.config_src_linux }}"
+    dest: "{{ gpg.config_dir }}/gpg-agent.conf"
+    state: link
+    mode: 0644
+
+- name: gpg | keys | import
+  shell: curl https://keybase.io/sabnatarajan/pgp_keys.asc | gpg --import

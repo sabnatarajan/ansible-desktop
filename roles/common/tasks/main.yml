@@ -21,3 +21,6 @@
 - name: wallpapers
   include: wallpapers.yml
   tags: wallpapers
+
+- include: gpg.yml
+  tags: gpg
