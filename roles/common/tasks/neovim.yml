@@ -13,7 +13,7 @@
   community.general.pacman:
     name: neovim
     state: present
-  
+
 - name: neovim | link config
   ansible.builtin.file:
     src: "{{ neovim.config_src }}"
