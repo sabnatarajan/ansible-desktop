@@ -7,7 +7,6 @@
     - { role: shell_tools,   tags: shell_tools }
     - { role: neovim,        tags: neovim }
     - { role: tmux,          tags: tmux }
-    - { role: karabiner,     tags: karabiner }
     - { role: apps,          tags: apps }
     - { role: gpg,           tags: gpg }
     - { role: yubikey,       tags: yubikey }

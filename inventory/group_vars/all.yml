@@ -33,6 +33,10 @@ wallpapers:
   src: "{{ dotfiles.path }}/wallpapers"
   dest: $HOME/.local/share/wallpapers
 
+karabiner:
+  config_src: "{{ dotfiles.path }}/karabiner"
+  config_dest: "{{ config.path }}/karabiner"
+
 shell_tools:
   - { name: starship }
   - { name: jq }

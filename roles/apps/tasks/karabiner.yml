@@ -1,0 +1,11 @@
+---
+- name: karabiner | install
+  community.general.homebrew_cask:
+    name: karabiner-elements
+    state: present
+
+- name: karabiner | link config
+  ansible.builtin.file:
+    src: "{{ karabiner.config_src }}"
+    dest: "{{ karabiner.config_dest }}"
+    state: link
