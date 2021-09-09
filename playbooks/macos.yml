@@ -5,7 +5,6 @@
     - { role: common,        tags: common }
     - { role: fish,          tags: fish }
     - { role: shell_tools,   tags: shell_tools }
-    - { role: neovim,        tags: neovim }
     - { role: apps,          tags: apps }
     - { role: yubikey,       tags: yubikey }
     - { role: pyenv,         tags: pyenv }

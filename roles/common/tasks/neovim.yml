@@ -1,0 +1,21 @@
+---
+
+- name: neovim | install (macos)
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew:
+    name:
+    - luajit
+    - neovim
+    state: present
+
+- name: neovim | install (archlinux)
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name: neovim
+    state: present
+  
+- name: neovim | link config
+  ansible.builtin.file:
+    src: "{{ neovim.config_src }}"
+    dest: "{{ neovim.config_dest }}"
+    state: link

@@ -42,6 +42,10 @@ tmux:
   config_src: "{{ dotfiles.path }}/tmux"
   config_dest: "{{ config.path }}/tmux"
 
+neovim:
+  config_src: "{{ dotfiles.path }}/nvim"
+  config_dest: "{{ config.path }}/nvim"
+
 karabiner:
   config_src: "{{ dotfiles.path }}/karabiner"
   config_dest: "{{ config.path }}/karabiner"

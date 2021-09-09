@@ -26,3 +26,6 @@
 
 - include: fonts.yml
   tags: fonts
+
+- include: neovim.yml
+  tags: neovim

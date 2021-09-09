@@ -8,8 +8,6 @@
     - { role: shell_tools,  tags: shell_tools }
     - { role: fish,         tags: fish }
     - { role: apps,         tags: apps }
-    - { role: neovim,       tags: neovim }
-    - { role: yubikey,      tags: yubikey }
     - { role: xorg,         tags: xorg }
     - { role: window-mgr,   tags: window-mgr }
     - { role: wallpapers,   tags: wallpapers }
