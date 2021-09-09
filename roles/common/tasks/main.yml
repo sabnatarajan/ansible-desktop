@@ -24,3 +24,6 @@
 
 - include: gpg.yml
   tags: gpg
+
+- include: tmux.yml
+  tags: tmux

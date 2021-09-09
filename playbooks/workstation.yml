@@ -8,7 +8,6 @@
     - { role: shell_tools,  tags: shell_tools }
     - { role: fish,         tags: fish }
     - { role: apps,         tags: apps }
-    - { role: tmux,         tags: tmux }
     - { role: neovim,       tags: neovim }
     - { role: fonts,        tags: fonts }
     - { role: yubikey,      tags: yubikey }

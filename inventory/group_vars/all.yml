@@ -38,6 +38,10 @@ wallpapers:
   src: "{{ dotfiles.path }}/wallpapers"
   dest: $HOME/.local/share/wallpapers
 
+tmux:
+  config_src: "{{ dotfiles.path }}/tmux"
+  config_dest: "{{ config.path }}/tmux"
+
 karabiner:
   config_src: "{{ dotfiles.path }}/karabiner"
   config_dest: "{{ config.path }}/karabiner"

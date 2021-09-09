@@ -1,4 +1,0 @@
----
-tmux_config_link: true
-tmux_config_src: $HOME/git/dotfiles/tmux
-tmux_config_dst: $HOME/.config/tmux

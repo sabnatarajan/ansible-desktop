@@ -1,0 +1,19 @@
+---
+
+- name: tmux | install | macos
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew:
+    name: tmux
+    state: present
+
+- name: tmux | install | archlinux
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name: tmux
+    state: present
+
+- name: tmux | link config
+  ansible.builtin.file:
+    src: "{{ tmux.config_src }}"
+    dest: "{{ tmux.config_dest }}"
+    state: link
