@@ -59,6 +59,21 @@ xorg:
   config_src: "{{ dotfiles.path }}/X11"
   config_dest: "{{ config.path }}/X11"
 
+window_mgr:
+  name: herbstluftwm
+  config_src: "{{ dotfiles.path }}/herbstluftwm"
+  config_dst: "{{ config.path }}/herbstluftwm"
+
+  polybar:
+    enabled: true
+    config_src: "{{ dotfiles.path }}/polybar"
+    config_dst: "{{ config.path }}/polybar"
+
+  picom:
+    enabled: true
+    config_src: "{{ dotfiles.path }}/picom"
+    config_dst: "{{ config.path }}/picom"
+
 shell_tools:
   - { name: starship }
   - { name: jq }

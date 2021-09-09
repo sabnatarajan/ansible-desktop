@@ -1,0 +1,6 @@
+---
+- include: "{{ window_mgr.name }}.yml"
+
+- include: polybar.yml
+
+- include: picom.yml
