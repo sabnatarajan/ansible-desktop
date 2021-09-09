@@ -25,6 +25,10 @@ fish:
   fisher_url: https://git.io/fisher
   fisher_dest: /tmp/fisher.fish
 
+alacritty:
+  config_src: "{{ dotfiles.path }}/alacritty"
+  config_dest: "{{ config.path }}/alacritty"
+
 shell_tools:
   - { name: starship }
   - { name: jq }

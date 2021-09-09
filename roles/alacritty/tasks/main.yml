@@ -1,13 +1,23 @@
 ---
-- name: Ensure Alacritty is installed
-  homebrew_cask:
+
+- name: debug
+  ansible.builtin.debug:
+    msg: "{{ ansible_architecture }}"
+
+- name: install | macos (x86)
+  community.general.homebrew_cask:
     name: alacritty
     state: present
-  when: "ansible_distribution == 'MacOSX'"
+  when: "ansible_distribution == 'Linux' and ansible_architecture == 'x86_64'"
 
-- name: Link Alacritty config
-  file:
-    src: "{{ alacritty_config_src }}"
-    dest: "{{ alacritty_config_dst }}"
+- name: install | archlinux
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name: alacritty
+    state: present
+
+- name: link config
+  ansible.builtin.file:
+    src: "{{ alacritty.config_src }}"
+    dest: "{{ alacritty.config_dest }}"
     state: link
-  when: "alacritty_config_link == True"
