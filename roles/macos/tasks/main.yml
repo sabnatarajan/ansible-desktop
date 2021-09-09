@@ -1,3 +1,7 @@
 ---
-- name: Change MacOS preferences
-  script: "macos.sh"
+
+- name: macos | change preferences
+  ansible.builtin.script: "macos.sh"
+
+- include: homebrew.yml
+  tags: homebrew

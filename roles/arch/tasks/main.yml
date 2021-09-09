@@ -1,5 +1,8 @@
 ---
 
+- name: yay
+  include: yay.yml
+
 - name: audio
   include: audio.yml
 

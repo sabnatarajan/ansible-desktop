@@ -1,17 +1,9 @@
 ---
 
-- name: macos | install homebrew
-  when: "ansible_os_family == 'Darwin'"
-  include: homebrew.yml
-
-- name: arch | install yay
-  when: "ansible_os_family == 'Archlinux'"
-  include: yay.yml
-
-- name: "homebrew | install"
+- name: shell_tools | install (brew)
   when: |
     ansible_os_family == 'Darwin'
-    and 'homebrew_cask' not in item
+    and 'cask' not in item
     and ansible_os_family|lower not in item.skip|default([])
   with_items: "{{ shell_tools }}"
   community.general.homebrew:
@@ -19,10 +11,10 @@
     name: "{{ item.package | default(item.name) }}"
     state: present
 
-- name: "homebrew cask | install"
+- name: shell_tools | install (brew cask)
   when: |
     ansible_os_family == 'Darwin'
-    and 'homebrew_cask' in item
+    and 'cask' in item
     and ansible_os_family|lower not in item.skip|default([])
   with_items: "{{ shell_tools }}"
   community.general.homebrew_cask:
@@ -30,10 +22,10 @@
     name: "{{ item.package | default(item.name) }}"
     state: present
 
-- name: "pacman | install"
+- name: shell_tools | install (pacman)
   when: |
     ansible_os_family == 'Archlinux'
-    and 'arch_aur' not in item
+    and 'aur' not in item
     and ansible_os_family|lower not in item.skip|default([])
   with_items: "{{ shell_tools }}"
   become: true

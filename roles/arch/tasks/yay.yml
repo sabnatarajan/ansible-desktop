@@ -1,23 +1,23 @@
 ---
 
-- name: archlinux | check installed packages
+- name: arch | check installed packages
   ansible.builtin.package_facts:
     manager: auto
 
-- name: archlinux | yay | clone repository
+- name: yay | clone repository
   when: "'yay' not in ansible_facts.packages"
   ansible.builtin.git:
     repo: "https://aur.archlinux.org/yay.git"
     dest: "/tmp/yay"
 
-- name: archlinux | yay | install deps
+- name: yay | install deps
   when: "'yay' not in ansible_facts.packages"
   become: true
   community.general.pacman:
     name: base-devel
     state: present
 
-- name: archlinux | yay | install
+- name: yay | install
   when: "'yay' not in ansible_facts.packages"
   ansible.builtin.command:
     cmd: "makepkg -si --noconfirm"

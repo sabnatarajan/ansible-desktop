@@ -4,3 +4,6 @@
 
 - include: starship.yml
   tags: starship
+
+- include: shell_tools.yml
+  tags: shell_tools
