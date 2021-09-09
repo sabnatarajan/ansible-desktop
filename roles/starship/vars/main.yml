@@ -1,4 +1,0 @@
----
-starship_config_link: true
-starship_config_src: $HOME/git/dotfiles/starship
-starship_config_dst: $HOME/.config/starship

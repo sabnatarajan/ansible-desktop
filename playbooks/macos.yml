@@ -9,7 +9,6 @@
     - { role: yubikey,       tags: yubikey }
     - { role: pyenv,         tags: pyenv }
     - { role: vscode,        tags: vscode }
-    - { role: starship,      tags: starship }
     - { role: brave-browser, tags: brave-browser }
     - { role: whatsapp,      tags: whatsapp }
     - { role: spotify,       tags: spotify }

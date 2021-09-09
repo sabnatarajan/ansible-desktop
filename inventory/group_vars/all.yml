@@ -51,6 +51,10 @@ karabiner:
   config_src: "{{ dotfiles.path }}/karabiner"
   config_dest: "{{ config.path }}/karabiner"
 
+starship:
+  config_src: "{{ dotfiles.path }}/starship"
+  config_dest: "{{ config.path }}/starship"
+
 shell_tools:
   - { name: starship }
   - { name: jq }

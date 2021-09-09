@@ -1,0 +1,19 @@
+---
+
+- name: starship | install (macos)
+  community.general.homebrew:
+    name: starship
+    state: present
+  when: "ansible_os_family == 'Darwin'"
+
+- name: starship | install (archlinux)
+  community.general.pacman:
+    name: starship
+    state: present
+  when: "ansible_os_family == 'Archlinux'"
+
+- name: starship | link config
+  ansible.builtin.file:
+    src: "{{ starship.config_src }}"
+    dest: "{{ starship.config_dest }}"
+    state: link
