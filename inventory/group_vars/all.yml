@@ -55,6 +55,10 @@ starship:
   config_src: "{{ dotfiles.path }}/starship"
   config_dest: "{{ config.path }}/starship"
 
+xorg:
+  config_src: "{{ dotfiles.path }}/X11"
+  config_dest: "{{ config.path }}/X11"
+
 shell_tools:
   - { name: starship }
   - { name: jq }

@@ -7,5 +7,4 @@
     - { role: arch,         tags: arch }
     - { role: shell,        tags: shell }
     - { role: apps,         tags: apps }
-    - { role: xorg,         tags: xorg }
     - { role: window-mgr,   tags: window-mgr }

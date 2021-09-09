@@ -2,7 +2,14 @@
 
 - name: x11 | install packages
   community.general.pacman:
-    name: "{{ item }}"
+    name:
+    - xorg
+    - xorg-init
+    - xorg-xmodmap
     state: present
-  loop:
-  - xorg-xmodmap
+
+- name: x11 | link config
+  ansible.builtin.file:
+    state: link
+    src: "{{ xorg_config_src }}"
+    dest: "{{ xorg_config_dst }}"
