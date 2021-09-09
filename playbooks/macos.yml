@@ -11,7 +11,6 @@
     - { role: vscode,        tags: vscode }
     - { role: brave-browser, tags: brave-browser }
     - { role: whatsapp,      tags: whatsapp }
-    - { role: spotify,       tags: spotify }
     - { role: docker,        tags: docker }
     - { role: steam,         tags: steam }
     - { role: parsec,        tags: parsec }

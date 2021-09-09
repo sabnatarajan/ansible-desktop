@@ -1,3 +1,0 @@
----
-- name: OS-specific install
-  include: "_{{ ansible_os_family }}.yml"

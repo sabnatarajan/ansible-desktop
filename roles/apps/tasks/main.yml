@@ -14,3 +14,6 @@
 - include: karabiner.yml
   tags: karabiner
   when: "ansible_os_family == 'Darwin'"
+
+- include: spotify.yml
+  tags: spotify

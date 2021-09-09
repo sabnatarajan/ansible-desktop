@@ -1,0 +1,13 @@
+---
+
+- name: spotify | install (macos)
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew_cask:
+    name: spotify
+    state: present
+
+- name: spotify | install (archlinux)
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name: spotify
+    state: present
