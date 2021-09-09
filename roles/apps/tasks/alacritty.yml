@@ -1,9 +1,5 @@
 ---
 
-- name: debug
-  ansible.builtin.debug:
-    msg: "{{ ansible_architecture }}"
-
 - name: install | macos (x86)
   community.general.homebrew_cask:
     name: alacritty

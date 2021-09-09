@@ -1,3 +1,4 @@
 ---
-- name: OS-specific install
-  include: "os_family/{{ ansible_os_family }}.yml"
+- name: alacritty
+  include: alacritty.yml
+  tags: alacritty

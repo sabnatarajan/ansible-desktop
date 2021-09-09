@@ -7,7 +7,7 @@
     - { role: arch,         tags: arch }
     - { role: shell_tools,  tags: shell_tools }
     - { role: fish,         tags: fish }
-    - { role: alacritty,    tags: alacritty }
+    - { role: apps,         tags: apps }
     - { role: tmux,         tags: tmux }
     - { role: neovim,       tags: neovim }
     - { role: fonts,        tags: fonts }
