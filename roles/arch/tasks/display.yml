@@ -2,8 +2,7 @@
 - name: display | install packages
   become: true
   community.general.pacman:
-    name: "{{ item }}"
+    name:
+    - picom
+    - nitrogen
     state: present
-  loop:
-  - picom
-  - nitrogen

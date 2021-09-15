@@ -3,10 +3,9 @@
 - name: bluetooth | install packages
   become: true
   community.general.pacman:
-    name: "{{ item }}"
+    name:
+    - bluez
+    - bluez-utils
+    - pulseaudio-bluetooth
+    - blueman
     state: present
-  loop:
-  - bluez
-  - bluez-utils
-  - pulseaudio-bluetooth
-  - blueman

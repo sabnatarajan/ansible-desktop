@@ -1,6 +1,7 @@
 ---
 
 - name: misc | gnome-keyring
+  become: true
   community.general.pacman:
     name: gnome-keyring
     state: present
