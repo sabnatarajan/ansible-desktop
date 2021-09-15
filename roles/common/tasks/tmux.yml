@@ -17,3 +17,9 @@
     src: "{{ tmux.config_src }}"
     dest: "{{ tmux.config_dest }}"
     state: link
+
+- name: tmux | plugin manager | clone
+  ansible.builtin.git:
+    clone: yes
+    repo: https://github.com/tmux-plugins/tpm
+    dest: ~/.config/tmux/plugins/tpm
