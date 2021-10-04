@@ -74,6 +74,11 @@ window_mgr:
     config_src: "{{ dotfiles.path }}/picom"
     config_dst: "{{ config.path }}/picom"
 
+  dunst:
+    enabled: true
+    config_src: "{{ dotfiles.path }}/dunst"
+    config_dst: "{{ config.path }}/dunst"
+
 shell_tools:
   - { name: starship }
   - { name: jq }

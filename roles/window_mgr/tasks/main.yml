@@ -4,3 +4,5 @@
 - include: polybar.yml
 
 - include: picom.yml
+
+- include: dunst.yml
