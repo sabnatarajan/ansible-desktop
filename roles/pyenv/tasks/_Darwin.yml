@@ -1,5 +1,0 @@
----
-- name: Install packages
-  homebrew:
-    name: "{{ pyenv_homebrew_packages }}"
-    state: present
