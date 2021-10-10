@@ -1,5 +1,0 @@
----
-- name: Install Whatsapp
-  homebrew_cask:
-    name: whatsapp
-    state: present

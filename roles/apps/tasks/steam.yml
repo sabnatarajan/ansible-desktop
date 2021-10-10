@@ -1,0 +1,7 @@
+---
+
+- name: steam | install (macos)
+  when: "ansible_os_family == 'Darwin'"
+  community.general.homebrew_cask:
+    name: steam
+    state: present
