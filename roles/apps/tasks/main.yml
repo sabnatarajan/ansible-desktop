@@ -1,21 +1,3 @@
 ---
-- include: alacritty.yml
-  tags: alacritty
-
-- include: discord.yml
-  tags: discord
-
-- include: bitwarden.yml
-  tags: bitwarden
-
-- include: spotify.yml
-  tags: spotify
-
-- include: vscode.yml
-  tags: vscode
-
-- include: firefox.yml
-  tags: firefox
-
-- include: brave.yml
-  tags: brave
+- include_tasks: "{{ item }}.yml"
+  with_items: "{{ apps }}"

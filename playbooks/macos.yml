@@ -7,6 +7,4 @@
     - { role: apps,          tags: apps }
     - { role: yubikey,       tags: yubikey }
     - { role: docker,        tags: docker }
-    - { role: steam,         tags: steam }
-    - { role: parsec,        tags: parsec }
     - { role: macos,         tags: macos }
