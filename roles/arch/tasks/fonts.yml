@@ -1,0 +1,26 @@
+---
+
+- name: fonts | install fontconfig
+  become: true
+  community.general.pacman:
+    name: fontconfig
+    state: present
+
+- name: fonts | link sane defaults
+  become: true
+  ansible.builtin.file:
+    state: link
+    mode: 0777
+    dest: "/etc/fonts/conf.d/{{ item }}"
+    src: "/usr/share/fontconfig/conf.avail/{{ item }}"
+  with_items:
+    - 10-sub-pixel-rgb.conf
+    - 11-lcdfilter-default.conf
+    - 70-no-bitmaps.conf
+
+- name: fonts | link fontconfig
+  ansible.builtin.file:
+    state: link
+    mode: 0777
+    src: "{{ dotfiles.path }}/fontconfig"
+    dest: "{{ config.path }}/fontconfig"

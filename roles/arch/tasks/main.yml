@@ -15,5 +15,9 @@
 - name: x11
   include: x11.yml
 
+- name: fonts
+  include: fonts.yml
+  tags: fonts
+
 - name: misc
   include: misc.yml
