@@ -9,7 +9,7 @@
   ansible.builtin.git:
     repo: "https://aur.archlinux.org/yay.git"
     dest: "/tmp/yay"
-    version: HEAD
+    version: master
 
 - name: yay | install deps
   when: "'yay' not in ansible_facts.packages"
