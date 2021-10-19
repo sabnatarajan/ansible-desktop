@@ -32,3 +32,15 @@
   community.general.pacman:
     name: "{{ item.package | default(item.name) }}"
     state: present
+
+- name: shell_tools | install (aur)
+  when: |
+    ansible_os_family == 'Archlinux'
+    and 'aur' in item
+    and ansible_os_family|lower not in item.skip|default([])
+  with_items: "{{ shell_tools }}"
+  kewlfft.aur.aur:
+    name: "{{ item.package | default(item.name) }}"
+    state: present
+    become: yes
+    become_user: aur_builder

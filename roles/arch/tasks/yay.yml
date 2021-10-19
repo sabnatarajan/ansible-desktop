@@ -23,3 +23,18 @@
   ansible.builtin.command:
     cmd: "makepkg -si --noconfirm"
     chdir: "/tmp/yay"
+
+- name: aur | create the `aur_builder` user
+  become: true
+  ansible.builtin.user:
+    name: aur_builder
+    create_home: yes
+    group: wheel
+
+- name: aur | nopasswd sudo for the `aur_builder`
+  become: true
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/11-install-aur_builder
+    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    validate: 'visudo -cf %s'
