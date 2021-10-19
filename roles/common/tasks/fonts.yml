@@ -25,6 +25,7 @@
     - ttf-hack
     - ttf-fira-code
     - ttf-liberation
+    - ttf-windows
 
 - name: fonts | reload font cache (archlinux)
   when: "ansible_os_family == 'Archlinux'"
