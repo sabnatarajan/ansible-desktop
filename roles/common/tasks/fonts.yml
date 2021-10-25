@@ -23,7 +23,6 @@
   when: "ansible_os_family == 'Archlinux'"
   community.general.pacman:
     name:
-    - ttf-hack
     - ttf-liberation
 
 - name: fonts | install (archlinux)
@@ -31,6 +30,7 @@
   kewlfft.aur.aur:
     name:
     - nerd-fonts-fira-code
+    - nerd-fonts-hack
 
 - name: fonts | reload font cache (archlinux)
   when: "ansible_os_family == 'Archlinux'"
