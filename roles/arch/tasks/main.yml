@@ -25,3 +25,4 @@
 
 - name: misc
   include: misc.yml
+  tags: arch-misc

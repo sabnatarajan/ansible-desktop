@@ -5,3 +5,9 @@
   community.general.pacman:
     name: gnome-keyring
     state: present
+
+- name: misc | numlockx
+  become: true
+  community.general.pacman:
+    name: numlockx
+    state: present
