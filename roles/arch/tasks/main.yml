@@ -1,5 +1,9 @@
 ---
 
+- name: base
+  include: base.yml
+  tags: arch-base
+
 - name: yay
   include: yay.yml
 

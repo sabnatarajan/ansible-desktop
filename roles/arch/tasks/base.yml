@@ -1,0 +1,6 @@
+---
+
+- name: base | timezone
+  become: true
+  community.general.timezone:
+    name: "{{ arch.timezone | default('America/New_York') }}"
