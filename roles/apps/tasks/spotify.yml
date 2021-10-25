@@ -8,6 +8,6 @@
 
 - name: spotify | install (archlinux)
   when: "ansible_os_family == 'Archlinux'"
-  community.general.pacman:
+  kewlfft.aur.aur:
     name: spotify
     state: present
