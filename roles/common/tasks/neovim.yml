@@ -26,7 +26,7 @@
   when: "ansible_os_family == 'Archlinux'"
   community.general.pacman:
     state: present
-    name: 
+    name:
     - rust-analyzer
     - pyright
     - gopls
