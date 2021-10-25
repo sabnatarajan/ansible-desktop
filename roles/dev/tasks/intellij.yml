@@ -1,0 +1,7 @@
+---
+
+- name: intellij | install (arch)
+  become: true
+  community.general.pacman:
+    name: intellij-idea-community-edition
+    state: present

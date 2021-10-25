@@ -3,3 +3,8 @@
 - name: pre-commit
   include: pre-commit.yml
   tags: pre-commit
+
+- name: intellij
+  when: "dev.intellij | default(False)"
+  include: intellij.yml
+  tags: intellij
