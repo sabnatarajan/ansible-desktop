@@ -11,3 +11,10 @@
   kewlfft.aur.aur:
     name: spotify
     state: present
+
+# Provide the qdbus command to get info from Spotify via DBus
+- name: spotify | install qt5-tools (archlinux)
+  become: true
+  community.general.pacman:
+    name: qt5-tools
+    state: present
