@@ -1,0 +1,6 @@
+---
+
+- name: zoom | install (arch)
+  kewlfft.aur.aur:
+    name: zoom
+    state: present
