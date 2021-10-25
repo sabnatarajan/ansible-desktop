@@ -4,3 +4,8 @@
   become: true
   community.general.timezone:
     name: "{{ arch.timezone | default('America/New_York') }}"
+
+- name: base | locale gen
+  community.general.locale_gen:
+    name: en_US.UTF-8
+    state: present
