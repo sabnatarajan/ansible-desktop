@@ -37,3 +37,6 @@
 
 - name: gpg | keys | import
   shell: curl https://keybase.io/sabnatarajan/pgp_keys.asc | gpg --import
+
+- name: gpg | keys | import ssh key
+  shell: gpg --export-ssh-key 7561E764BECC583B > ~/.ssh/yubikey_rsa.pub
