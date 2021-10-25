@@ -1,0 +1,7 @@
+---
+
+- name: pre-commit | install (arch)
+  become: true
+  community.general.pacman:
+    name: python-pre-commit
+    state: present

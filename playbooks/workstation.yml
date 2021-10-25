@@ -4,7 +4,8 @@
   hosts: localhost
   roles:
     - { role: arch,         tags: arch }
+    - { role: window_mgr,   tags: window_mgr }
     - { role: common,       tags: common }
     - { role: shell,        tags: shell }
     - { role: apps,         tags: apps }
-    - { role: window_mgr,   tags: window_mgr }
+    - { role: dev,          tags: dev }

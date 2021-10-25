@@ -1,0 +1,5 @@
+---
+
+- name: pre-commit
+  include: pre-commit.yml
+  tags: pre-commit
