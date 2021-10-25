@@ -9,6 +9,7 @@
     state: present
 
 - name: neovim | install (archlinux)
+  become: true
   when: "ansible_os_family == 'Archlinux'"
   community.general.pacman:
     name: neovim

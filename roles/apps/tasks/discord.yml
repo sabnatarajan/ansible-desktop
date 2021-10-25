@@ -6,6 +6,7 @@
     state: present
 
 - name: discord | install | archlinux
+  become: true
   when: "ansible_os_family == 'Archlinux'"
   community.general.pacman:
     name: discord

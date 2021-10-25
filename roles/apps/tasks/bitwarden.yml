@@ -7,7 +7,8 @@
     state: present
 
 - name: bitwarden | install | archlinux
+  become: true
   when: "ansible_os_family == 'Archlinux'"
-  community.general.homebrew_cask:
+  community.general.pacman:
     name: bitwarden
     state: present

@@ -7,6 +7,7 @@
   when: "ansible_os_family == 'Darwin'"
 
 - name: starship | install (archlinux)
+  become: true
   community.general.pacman:
     name: starship
     state: present
