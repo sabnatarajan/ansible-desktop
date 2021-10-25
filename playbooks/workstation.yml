@@ -3,8 +3,8 @@
 - name: Workstation playbook
   hosts: localhost
   roles:
-    - { role: common,       tags: common }
     - { role: arch,         tags: arch }
+    - { role: common,       tags: common }
     - { role: shell,        tags: shell }
     - { role: apps,         tags: apps }
     - { role: window_mgr,   tags: window_mgr }
