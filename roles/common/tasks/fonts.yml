@@ -19,13 +19,18 @@
     state: present
 
 - name: fonts | install (archlinux)
-  when: "ansible_os_family == 'ArchLinux'"
+  become: true
+  when: "ansible_os_family == 'Archlinux'"
   community.general.pacman:
     name:
     - ttf-hack
-    - ttf-fira-code
     - ttf-liberation
-    - ttf-windows
+
+- name: fonts | install (archlinux)
+  when: "ansible_os_family == 'Archlinux'"
+  kewlfft.aur.aur:
+    name:
+    - nerd-fonts-fira-code
 
 - name: fonts | reload font cache (archlinux)
   when: "ansible_os_family == 'Archlinux'"
