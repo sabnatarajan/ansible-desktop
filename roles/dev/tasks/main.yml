@@ -4,6 +4,10 @@
   include: pre-commit.yml
   tags: pre-commit
 
+- name: direnv
+  include: direnv.yml
+  tags: direnv
+
 - name: intellij
   when: "dev.intellij | default(False)"
   include: intellij.yml

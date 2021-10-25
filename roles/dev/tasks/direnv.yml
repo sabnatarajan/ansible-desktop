@@ -1,0 +1,6 @@
+---
+
+- name: direnv | install (arch)
+  kewlfft.aur.aur:
+    name: direnv
+    state: present
