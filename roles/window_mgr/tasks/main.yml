@@ -6,3 +6,5 @@
 - include: picom.yml
 
 - include: dunst.yml
+
+- include: rofi.yml
