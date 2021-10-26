@@ -24,6 +24,7 @@
   community.general.pacman:
     name:
     - ttf-liberation
+    - noto-fonts-emoji
 
 - name: fonts | install (archlinux)
   when: "ansible_os_family == 'Archlinux'"
