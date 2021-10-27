@@ -6,3 +6,9 @@
   community.general.homebrew_cask:
     name: whatsapp
     state: present
+
+- name: whatsapp | install (arch)
+  when: "ansible_os_family == 'Archlinux'"
+  kewlfft.aur.aur:
+    name: whatsapp-nativefier
+    state: present
