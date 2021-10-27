@@ -6,3 +6,23 @@
   community.general.homebrew_cask:
     name: steam
     state: present
+
+- name: steam | arch | enable multilib
+  become: true
+  ansible.builtin.blockinfile:
+    path: /etc/pacman.conf
+    block: |
+      [multilib]
+      Include = /etc/pacman.d/mirrorlist
+
+- name: steam | arch | install
+  become: true
+  community.general.pacman:
+    name: steam
+    state: present
+    update_cache: yes
+
+- name: steam | arch | install extras
+  kewlfft.aur.aur:
+    name: steam-fonts
+    state: present
