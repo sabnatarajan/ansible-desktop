@@ -1,0 +1,16 @@
+---
+
+- name: user | create `sab`
+  become: true
+  ansible.builtin.user:
+    name: sab
+    create_home: yes
+    group: wheel
+
+- name: user | nopasswd sudo for `wheel` group
+  become: true
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/99-wheel-nopasswd
+    line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+    create: yes
+    validate: 'visudo -cf %s'
