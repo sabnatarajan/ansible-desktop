@@ -6,6 +6,7 @@
 
 - name: yay
   include: yay.yml
+  tags: arch-yay
 
 - name: user
   include: user.yml
@@ -13,15 +14,19 @@
 
 - name: audio
   include: audio.yml
+  tags: arch-audio
 
 - name: bluetooth
   include: bluetooth.yml
+  tags: arch-bluetooth
 
 - name: display
   include: display.yml
+  tags: arch-display
 
 - name: x11
   include: x11.yml
+  tags: arch-x11
 
 - name: fonts
   include: fonts.yml
