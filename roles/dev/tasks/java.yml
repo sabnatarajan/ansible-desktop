@@ -1,0 +1,22 @@
+---
+
+- name: java | install jdk (arch)
+  when: ansible_os_family == 'Archlinux'
+  kewlfft.aur.aur:
+    name:
+    - jdk8-adoptopenjdk
+    - jdk11-adoptopenjdk
+    - jdtls
+    state: present
+
+- name: java | set 11 as default
+  become: true
+  when: ansible_os_family == 'Archlinux'
+  ansible.builtin.command: archlinux-java set java-11-adoptopenjdk
+
+- name: intellij | install (arch)
+  become: true
+  when: "ansible_os_family == 'Archlinux' and dev.java.intellij | default(False)"
+  community.general.pacman:
+    name: intellij-idea-community-edition
+    state: present
