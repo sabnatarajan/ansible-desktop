@@ -1,0 +1,10 @@
+---
+
+- name: go | install packages (arch)
+  become: true
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name:
+    - go
+    - gopls
+    state: present

@@ -12,3 +12,11 @@
   when: "dev.intellij | default(False)"
   include: intellij.yml
   tags: intellij
+
+- name: go
+  include: go.yml
+  tags: go
+
+- name: rust
+  include: rust.yml
+  tags: rust

@@ -1,0 +1,17 @@
+---
+
+- name: rust | install packages (arch)
+  become: true
+  when: "ansible_os_family == 'Archlinux'"
+  community.general.pacman:
+    name:
+    - rustup
+    - rust-analyzer
+    state: present
+
+- name: rust | install stable
+  ansible.builtin.command: rustup default stable
+
+- name: rust | cargo info
+  ansible.builtin.debug:
+    msg: "[dev/rust] Make sure ~/.cargo is in your $PATH"
