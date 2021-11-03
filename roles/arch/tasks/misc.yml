@@ -1,5 +1,7 @@
 ---
 
+# TODO: perhaps combine installing these packages
+
 - name: misc | gnome-keyring
   become: true
   community.general.pacman:
@@ -10,4 +12,10 @@
   become: true
   community.general.pacman:
     name: numlockx
+    state: present
+
+- name: misc | flameshot
+  become: true
+  community.general.pacman:
+    name: flameshot
     state: present
