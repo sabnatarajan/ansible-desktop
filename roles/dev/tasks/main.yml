@@ -19,3 +19,7 @@
 - name: rust
   include: rust.yml
   tags: rust
+
+- name: docker
+  include: docker.yml
+  tags: docker

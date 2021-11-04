@@ -1,0 +1,19 @@
+---
+
+- name: docker | install (arch)
+  become: true
+  when: ansible_os_family == 'Archlinux'
+  community.general.pacman:
+    name: docker
+    state: present
+
+- name: docker | add user to `docker` group
+  become: true
+  ansible.builtin.user:
+    name: "{{ ansible_user_id }}"
+    group: docker
+
+- name: docker | info
+  ansible.builtin.debug:
+    msg: "[dev/docker]: You might have to log out and back in for the group change to take effect."
+
