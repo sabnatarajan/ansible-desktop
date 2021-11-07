@@ -2,14 +2,14 @@
 
 - name: polybar | install
   when: "ansible_distribution == 'Archlinux'"
-  pacman:
+  community.general.pacman:
     name: polybar
     state: present
     executable: yay
 
 - name: polybar | link config
   when: "window_mgr.polybar.enabled"
-  file:
+  ansible.builtin.file:
     state: link
     src: "{{ window_mgr.polybar.config_src }}"
     dest: "{{ window_mgr.polybar.config_dst }}"

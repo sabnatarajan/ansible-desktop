@@ -2,12 +2,12 @@
 - name: herbstluftwm | install
   when: "ansible_os_family == 'Archlinux'"
   become: true
-  pacman:
+  community.general.pacman:
     name: herbstluftwm
     state: present
 
 - name: herbstluftwm | link config
-  file:
+  ansible.builtin.file:
     state: link
     src: "{{ window_mgr.config_src }}"
     dest: "{{ window_mgr.config_dst }}"
