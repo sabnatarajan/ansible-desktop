@@ -5,4 +5,5 @@
     name:
     - picom
     - nitrogen
+    - feh
     state: present
