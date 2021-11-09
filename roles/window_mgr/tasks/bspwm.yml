@@ -1,0 +1,22 @@
+---
+
+- name: bspwm | install
+  when: "ansible_os_family == 'Archlinux'"
+  become: true
+  community.general.pacman:
+    name: 
+    - bspwm
+    - sxhkd
+    state: present
+
+- name: bspwm | link config
+  ansible.builtin.file:
+    state: link
+    src: "{{ window_mgr.config_src }}"
+    dest: "{{ window_mgr.config_dst }}"
+
+- name: bspwm | link sxhkd config
+  ansible.builtin.file:
+    state: link
+    src: "{{ window_mgr.sxhkd.config_src }}"
+    dest: "{{ window_mgr.sxhkd.config_dst }}"
