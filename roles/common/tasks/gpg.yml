@@ -35,6 +35,13 @@
     state: link
     mode: 0644
 
+
+- name: gpg | pinentry | install pinentry-rofi (linux)
+  when: "ansible_os_family != 'Darwin'"
+  kewlfft.aur.aur:
+    name: pinentry-rofi
+    state: present
+
 - name: gpg | keys | import
   shell: curl https://keybase.io/sabnatarajan/pgp_keys.asc | gpg --import
 
