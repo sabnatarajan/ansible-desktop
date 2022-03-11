@@ -6,6 +6,7 @@
     name: "{{ arch.timezone | default('America/New_York') }}"
 
 - name: base | locale gen
+  become: true
   community.general.locale_gen:
     name: en_US.UTF-8
     state: present
