@@ -35,11 +35,19 @@
     state: link
     mode: 0644
 
-
 - name: gpg | pinentry | install pinentry-rofi (linux)
   when: "ansible_os_family != 'Darwin'"
   kewlfft.aur.aur:
     name: pinentry-rofi
+    state: present
+
+- name: gpg | scdaemon | install dependencies (linux)
+  when: "ansible_os_family != 'Darwin'"
+  become: true
+  community.general.pacman:
+    name: 
+      - pcsclite
+      - ccid
     state: present
 
 - name: gpg | keys | import
