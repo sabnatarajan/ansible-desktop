@@ -2,10 +2,9 @@
 
 - name: polybar | install
   when: "ansible_distribution == 'Archlinux'"
-  community.general.pacman:
+  kewlfft.aur.aur:
     name: polybar
     state: present
-    executable: yay
 
 - name: polybar | link config
   when: "window_mgr.polybar.enabled"
