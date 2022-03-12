@@ -83,6 +83,10 @@ window_mgr:
     config_src: "{{ dotfiles.path }}/sxhkd"
     config_dst: "{{ config.path }}/sxhkd"
 
+  rofi:
+    config_src: "{{ dotfiles.path }}/rofi"
+    config_dst: "{{ config.path }}/rofi"
+
 shell_tools:
   - { name: starship }
   - { name: jq }
