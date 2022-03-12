@@ -1,0 +1,7 @@
+---
+
+- name: wireguard | install
+  become: true
+  community.general.pacman:
+    name: wireguard-tools
+    state: present

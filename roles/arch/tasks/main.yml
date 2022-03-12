@@ -32,6 +32,10 @@
   include: fonts.yml
   tags: fonts
 
+- name: network
+  include: network.yml
+  tags: arch-network
+
 - name: misc
   include: misc.yml
   tags: arch-misc
