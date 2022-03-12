@@ -16,4 +16,3 @@
 - name: docker | info
   ansible.builtin.debug:
     msg: "[dev/docker]: You might have to log out and back in for the group change to take effect."
-

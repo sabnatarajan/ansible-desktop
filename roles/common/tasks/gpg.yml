@@ -45,7 +45,7 @@
   when: "ansible_os_family != 'Darwin'"
   become: true
   community.general.pacman:
-    name: 
+    name:
       - pcsclite
       - ccid
     state: present

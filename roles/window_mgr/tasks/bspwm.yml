@@ -4,7 +4,7 @@
   when: "ansible_os_family == 'Archlinux'"
   become: true
   community.general.pacman:
-    name: 
+    name:
     - bspwm
     - sxhkd
     state: present
