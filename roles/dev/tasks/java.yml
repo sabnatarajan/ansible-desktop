@@ -7,6 +7,7 @@
     - jdk8-adoptopenjdk
     - jdk11-adoptopenjdk
     - jdtls
+    - maven
     state: present
 
 - name: java | set 11 as default
