@@ -109,6 +109,8 @@ shell_tools:
   - { name: git-delta }
   - { name: bind-tools, skip: ['darwin'] }
   - { name: inetutils, skip: ['darwin'] }
+  - { name: tree }
+  - { name: xsel, skip: ['darwin'] }
 
 apps:
   - alacritty
