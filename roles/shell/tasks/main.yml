@@ -1,6 +1,7 @@
 ---
 
 - include: "{{ config.shell }}.yml"
+  tags: shell
 
 - include: starship.yml
   tags: starship
