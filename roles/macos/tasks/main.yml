@@ -3,12 +3,12 @@
 - name: macos | change preferences
   ansible.builtin.script: "macos.sh"
 
-- include: homebrew.yml
+- include_tasks: homebrew.yml
   tags: homebrew
 
-- include: alfred.yml
+- include_tasks: alfred.yml
   tags: alfred
 
-- include: karabiner.yml
+- include_tasks: karabiner.yml
   tags: karabiner
   when: "ansible_os_family == 'Darwin'"

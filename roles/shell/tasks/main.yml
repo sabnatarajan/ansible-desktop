@@ -1,10 +1,10 @@
 ---
 
-- include: "{{ config.shell }}.yml"
+- include_tasks: "{{ config.shell }}.yml"
   tags: shell
 
-- include: starship.yml
+- include_tasks: starship.yml
   tags: starship
 
-- include: shell_tools.yml
+- include_tasks: shell_tools.yml
   tags: shell_tools

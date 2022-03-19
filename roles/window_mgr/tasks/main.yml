@@ -1,11 +1,11 @@
 ---
 
-- include: "{{ window_mgr.name }}.yml"
+- include_tasks: "{{ window_mgr.name }}.yml"
 
-- include: polybar.yml
+- include_tasks: polybar.yml
 
-- include: picom.yml
+- include_tasks: picom.yml
 
-- include: dunst.yml
+- include_tasks: dunst.yml
 
-- include: rofi.yml
+- include_tasks: rofi.yml

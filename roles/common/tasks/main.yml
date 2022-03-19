@@ -6,26 +6,26 @@
     state: directory
     mode: 0700
 
-- include: dotfiles.yml
+- include_tasks: dotfiles.yml
   tags: dotfiles
 
-- include: git.yml
+- include_tasks: git.yml
   tags: git
 
-- include: ssh.yml
+- include_tasks: ssh.yml
   tags: ssh
 
-- include: wallpapers.yml
+- include_tasks: wallpapers.yml
   tags: wallpapers
 
-- include: gpg.yml
+- include_tasks: gpg.yml
   tags: gpg
 
-- include: tmux.yml
+- include_tasks: tmux.yml
   tags: tmux
 
-- include: fonts.yml
+- include_tasks: fonts.yml
   tags: fonts
 
-- include: neovim.yml
+- include_tasks: neovim.yml
   tags: neovim

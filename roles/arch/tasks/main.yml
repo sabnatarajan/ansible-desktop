@@ -1,41 +1,41 @@
 ---
 
 - name: base
-  include: base.yml
+  include_tasks: base.yml
   tags: arch-base
 
 - name: yay
-  include: yay.yml
+  include_tasks: yay.yml
   tags: arch-yay
 
 - name: user
-  include: user.yml
+  include_tasks: user.yml
   tags: arch-user
 
 - name: audio
-  include: audio.yml
+  include_tasks: audio.yml
   tags: arch-audio
 
 - name: bluetooth
-  include: bluetooth.yml
+  include_tasks: bluetooth.yml
   tags: arch-bluetooth
 
 - name: display
-  include: display.yml
+  include_tasks: display.yml
   tags: arch-display
 
 - name: x11
-  include: x11.yml
+  include_tasks: x11.yml
   tags: arch-x11
 
 - name: fonts
-  include: fonts.yml
+  include_tasks: fonts.yml
   tags: fonts
 
 - name: network
-  include: network.yml
+  include_tasks: network.yml
   tags: arch-network
 
 - name: misc
-  include: misc.yml
+  include_tasks: misc.yml
   tags: arch-misc

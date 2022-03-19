@@ -1,25 +1,25 @@
 ---
 
 - name: pre-commit
-  include: pre-commit.yml
+  include_tasks: pre-commit.yml
   tags: pre-commit
 
 - name: direnv
-  include: direnv.yml
+  include_tasks: direnv.yml
   tags: direnv
 
 - name: java
-  include: java.yml
+  include_tasks: java.yml
   tags: java
 
 - name: go
-  include: go.yml
+  include_tasks: go.yml
   tags: go
 
 - name: rust
-  include: rust.yml
+  include_tasks: rust.yml
   tags: rust
 
 - name: docker
-  include: docker.yml
+  include_tasks: docker.yml
   tags: docker
