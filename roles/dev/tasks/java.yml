@@ -17,7 +17,7 @@
 
 - name: intellij | install (arch)
   become: true
-  when: "ansible_os_family == 'Archlinux' and dev.java.intellij | default(False)"
+  when: "ansible_os_family == 'Archlinux' and dev.java.intellij | default(True)"
   community.general.pacman:
     name: intellij-idea-community-edition
     state: present
