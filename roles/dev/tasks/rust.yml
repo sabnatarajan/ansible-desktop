@@ -6,7 +6,6 @@
   community.general.pacman:
     name:
     - rustup
-    - rust-analyzer
     state: present
 
 - name: rust | install stable
