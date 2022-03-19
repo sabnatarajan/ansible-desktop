@@ -6,3 +6,8 @@
     dest: "{{ dotfiles.path }}"
     accept_hostkey: true
     version: main
+
+- name: dotfiles | add remote push-url
+  ansible.builtin.command:
+    cmd: "git remote set-url --push origin {{ dotfiles.origin }}"
+    chdir: "{{ dotfiles.path }}"

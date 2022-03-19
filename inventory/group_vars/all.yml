@@ -5,6 +5,7 @@ config:
   shell: fish
 
 dotfiles:
+  origin: "git@sn:sabnatarajan/dotfiles.git"
   repo: "https://github.com/sabnatarajan/dotfiles.git"
   path: "$HOME/dotfiles"
 
