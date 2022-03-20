@@ -42,5 +42,3 @@
   kewlfft.aur.aur:
     name: "{{ item.package | default(item.name) }}"
     state: present
-    become: yes
-    become_user: aur_builder

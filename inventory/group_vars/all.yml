@@ -97,6 +97,7 @@ shell_tools:
   - { name: fzf }
   - { name: kubectl }
   - { name: kubectx }
+  - { name: flux-bin, skip: ['darwin'], aur: true }
   - { name: k9s }
   - { name: lazygit }
   - { name: ncdu }
