@@ -6,4 +6,5 @@
     - picom
     - nitrogen
     - feh
+    - wmname
     state: present
