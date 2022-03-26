@@ -1,0 +1,15 @@
+---
+
+- name: awesome-wm | install
+  when: "ansible_os_family == 'Archlinux'"
+  become: true
+  community.general.pacman:
+    name:
+    - awesome
+    state: present
+
+- name: awesome-wm | link config
+  ansible.builtin.file:
+    state: link
+    src: "{{ window_mgr.config_src }}"
+    dest: "{{ window_mgr.config_dst }}"

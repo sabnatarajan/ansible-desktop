@@ -61,9 +61,9 @@ xorg:
   config_dest: "{{ config.path }}/X11"
 
 window_mgr:
-  name: bspwm
-  config_src: "{{ dotfiles.path }}/herbstluftwm"
-  config_dst: "{{ config.path }}/herbstluftwm"
+  name: awesome
+  config_src: "{{ dotfiles.path }}/awesome"
+  config_dst: "{{ config.path }}/awesome"
 
   polybar:
     enabled: true
