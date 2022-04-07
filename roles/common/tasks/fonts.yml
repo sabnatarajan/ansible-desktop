@@ -16,6 +16,7 @@
     name:
     - font-hack-nerd-font
     - font-fira-code-nerd-font
+    - font-jetbrains-mono-nerd-font
     state: present
 
 - name: fonts | install (archlinux)
@@ -36,6 +37,7 @@
     name:
     - nerd-fonts-fira-code
     - nerd-fonts-hack
+    - nerd-fonts-jetbrains-mono
 
 - name: fonts | reload font cache (archlinux)
   when: "ansible_os_family == 'Archlinux'"
