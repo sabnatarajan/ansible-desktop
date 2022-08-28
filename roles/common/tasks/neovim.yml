@@ -27,7 +27,6 @@
   community.general.pacman:
     state: present
     name:
-    - rust-analyzer
     - pyright
     - gopls
     - bash-language-server

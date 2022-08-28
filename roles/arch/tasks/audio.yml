@@ -4,7 +4,5 @@
   become: true
   community.general.pacman:
     name:
-    - pulseaudio-alsa
-    - pavucontrol
-    - playerctl
+    - pipewire
     state: present

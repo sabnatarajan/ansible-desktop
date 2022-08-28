@@ -4,8 +4,8 @@
   when: ansible_os_family == 'Archlinux'
   kewlfft.aur.aur:
     name:
-    - jdk8-adoptopenjdk
-    - jdk11-adoptopenjdk
+    - jdk8-openjdk
+    - jdk11-openjdk
     - jdtls
     - maven
     state: present
@@ -13,7 +13,7 @@
 - name: java | set 11 as default
   become: true
   when: ansible_os_family == 'Archlinux'
-  ansible.builtin.command: archlinux-java set java-11-adoptopenjdk
+  ansible.builtin.command: archlinux-java set java-11-openjdk
 
 - name: intellij | install (arch)
   become: true

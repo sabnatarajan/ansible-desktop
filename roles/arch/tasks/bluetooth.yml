@@ -6,6 +6,5 @@
     name:
     - bluez
     - bluez-utils
-    - pulseaudio-bluetooth
     - blueman
     state: present
