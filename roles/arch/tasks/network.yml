@@ -1,5 +1,13 @@
 ---
 
+- name: network | NetworkManager
+  become: true
+  community.general.pacman:
+    name:
+      - networkmanager
+      - polkit
+    state: present
+
 - name: wireguard | install
   become: true
   community.general.pacman:
