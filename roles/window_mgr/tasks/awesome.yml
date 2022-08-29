@@ -13,3 +13,12 @@
     state: link
     src: "{{ window_mgr.config_src }}"
     dest: "{{ window_mgr.config_dst }}"
+
+- name: awesome-wm | install dependencies
+  when: "ansible_is_family == 'Archlinux'"
+  become: true
+  community.general.pacman:
+    name:
+    - arc-icon-theme
+    - acpi
+    state: present
