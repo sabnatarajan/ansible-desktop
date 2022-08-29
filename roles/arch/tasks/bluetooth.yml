@@ -8,3 +8,10 @@
     - bluez-utils
     - blueman
     state: present
+
+- name: bluetooth | enable service
+  become: true
+  ansible.builtin.service:
+    name: bluetooth
+    enabled: yes
+    state: started
